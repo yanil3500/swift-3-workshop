@@ -37,7 +37,7 @@ Remove `myConstant = 10` to clear the error.
 ##Type Inference  
 > Note: You don’t always have to write types explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that myVariable and myConstant are integers because their initial values are integers.  
 
-On line **11**, Add the following:
+In the playground, below the above code, Add the following:  
 ```swift
 let myName : String = "Adam"
 ```  
@@ -46,15 +46,73 @@ Notice that this is how you explicitly tell the compiler that `myName` is a Stri
 let myName = "Adam"
 ```  
 
-This works great most of the time. Be aware that the compiler cannot ALWAYS make this inference accurately. In some situations, we will need to explicitly say what type a value has.  
-For example, on line **13**, add the following:  
-```swift
+This works great most of the time. But, be aware that the compiler cannot ALWAYS make this inference accurately. In some situations, we will need to explicitly say what type a value has. We will see this later in lab.  
 
-```
-###Data Types  
-####Numeric Types  
+##Numeric Types  
+###Integers  
+> Note: Integers are whole numbers with no fractional component, such as 42 and -23. Integers are either signed (positive, zero, or negative) or unsigned (positive or zero).  
+
+> Note: Swift provides signed and unsigned integers in 8, 16, 32, and 64 bit forms. These integers follow a naming convention similar to C, in that an 8-bit unsigned integer is of type UInt8, and a 32-bit signed integer is of type Int32. Like all types in Swift, these integer types have capitalized names.  
+
+> In most cases, you don’t need to pick a specific size of integer to use in your code. Swift provides an additional integer type, Int, which has the same size as the current platform’s native word size:
+
+  > On a 32-bit platform, Int is the same size as Int32.  
+  > On a 64-bit platform, Int is the same size as Int64.  
+
+> Unless you need to work with a specific size of integer, always use Int for integer values in your code. This aids code consistency and interoperability. Even on 32-bit platforms, Int can store any value between -2,147,483,648 and 2,147,483,647, and is large enough for many integer ranges.
+
+1. Under `//Numeric Type` in our playground, write the following: 
+```swift
+let minValue = UInt8.min
+let maxValue = UInt8.max
+```  
+This will show you the max and min values of the `UInt8` type.  
+
+###Floating Point Values  
+> Note: In Swift 3, `Double` represents a 64-bit floating-point number.
+`Float` represents a 32-bit floating-point number. Double has a precision of at least 15 decimal digits, whereas the precision of Float can be as little as 6 decimal digits.  
+
+> The appropriate floating-point type to use depends on the nature and range of values you need to work with in your code. In situations where either type would be appropriate, Double is preferred.  
+
+To give examples of the accuracy of `Double` and `Float`, add the following 2 lines underneath the above code:  
+```swift
+let myFloat : Float = 1.234937
+let myDouble : Double = 1.234937987231234
+```  
+Play with the above values for a moment to get a feel for the accuracy of both.  
+
 ####Strings  
+> Note: A string is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the String type. The contents of a String can be accessed in various ways, including as a collection of Character values.
+
+In Playground, under `//String`, type the following:  
+```swift
+let someString = "Some string literal value"
+```  
+Remember, the above is inferred by the compiler to be a String.  
+To initialize an empty String, you can do either of the following:  
+```swift
+var emptyString = ""
+var anotherEmptyString = String()
+```  
+The 2nd uses the designated initializer of the String() type.  
+More on this later.  
+
+You can also use basic operators on String types to create new Strings.  
+In your playground, add the following:  
+```swift
+let firstName = "Adam"
+let lastName = "Wallraff"
+
+var fullName : String
+
+fullName = firstName + " " + lastName
+```  
+
+There are many other powerful operations for String manipulation to look into. Check out the documentation here: [Swift 3 Programming Guide - Strings](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)  
+
+
 ####Tuples  
+
 ###Collection Types  
 ####Sets  
 > Sets do not have type inference. You must be explicit when declaring `Set` types.  
