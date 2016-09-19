@@ -28,6 +28,8 @@ myConstant = 10
 **Note the error we get:**  
 ![Imgur](http://i.imgur.com/wPWExau.png)
 
+
+
 ####Type Inference  
 
 ###Data Types  
