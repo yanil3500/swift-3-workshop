@@ -55,10 +55,10 @@
 		1AB4B3B41D904C5F008DD0F0 /* CFS3ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				1AB4B3C81D904E74008DD0F0 /* Swift3Workshop.playground */,
+				1AB4B3CA1D9054BE008DD0F0 /* controllers */,
+				1AB4B3C91D9054B0008DD0F0 /* storyboards */,
 				1AB4B3C71D904D75008DD0F0 /* supporting */,
-				1AB4B3B71D904C5F008DD0F0 /* ViewController.swift */,
-				1AB4B3B91D904C5F008DD0F0 /* Main.storyboard */,
-				1AB4B3BE1D904C60008DD0F0 /* LaunchScreen.storyboard */,
 			);
 			path = CFS3ToDoList;
 			sourceTree = "<group>";
@@ -69,9 +69,25 @@
 				1AB4B3BC1D904C60008DD0F0 /* Assets.xcassets */,
 				1AB4B3B51D904C5F008DD0F0 /* AppDelegate.swift */,
 				1AB4B3C11D904C60008DD0F0 /* Info.plist */,
-				1AB4B3C81D904E74008DD0F0 /* Swift3Workshop.playground */,
 			);
 			name = supporting;
+			sourceTree = "<group>";
+		};
+		1AB4B3C91D9054B0008DD0F0 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1AB4B3B91D904C5F008DD0F0 /* Main.storyboard */,
+				1AB4B3BE1D904C60008DD0F0 /* LaunchScreen.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		1AB4B3CA1D9054BE008DD0F0 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AB4B3B71D904C5F008DD0F0 /* ViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
