@@ -27,7 +27,10 @@ myConstant = 10
 
 **Note the error we get:**  
 ![Imgur](http://i.imgur.com/wPWExau.png)  
+What does the error say?  
 Remove `myConstant = 10` to clear the error.  
+
+> As an iOS Developer, one of the best practices we follow is that every value we declare should start as a `let` constant. If you need to change the value, go back and make it a `var` declaration when needed.  This helps to make sure you never accidentally have a value change, or unnecessarily change a value that you did not intend to.  
 
 ####Type Inference  
 > Note: You don’t always have to write types explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that myVariable and myConstant are integers because their initial values are integers.  
