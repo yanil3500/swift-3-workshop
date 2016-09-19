@@ -119,7 +119,49 @@ if temperatureInFahrenheit <= 32 {
 
 //Switch Statement
 
+let someCharacter: Character = "z"
+switch someCharacter {
+case "a":
+    print("The first letter of the alphabet")
+case "z":
+    print("The last letter of the alphabet")
+default:
+    print("Some other character")
+}
 
+let approximateCount = 12
+
+let countDescription : String
+
+switch approximateCount {
+case 0:
+    countDescription = "none"
+case 1...5:
+    countDescription = "a few"
+case 5..<12:
+    countDescription = "several"
+case 12, 24, 36, 48:
+    countDescription = "dozens of"
+case 100..<1000:
+    countDescription = "hundreds of"
+default:
+    countDescription = "unknown"
+}
+
+let somePoint = (x: 1,y: 1)
+
+switch somePoint {
+case (0, 0):
+    print("(0, 0) is at the origin")
+case (_, 0):
+    print("(\(somePoint.x), 0) is on the x-axis")
+case (0, _):
+    print("(0, \(somePoint.y)) is on the y-axis")
+case (-2...2, -2...2):
+    print("(\(somePoint.x), \(somePoint.y)) is inside the box")
+default:
+    print("(\(somePoint.x), \(somePoint.y)) is outside of the box")
+}
 
 //Optionals
 

@@ -343,10 +343,96 @@ if temperatureInFahrenheit <= 32 {
 Now, if we manipulate the `temperatureInFahrenheit` value, we can see it handles each of our situations.  
 
 ###Switch Statements  
-> Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.  
+> Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements.  
+> A switch statement considers a value and compares it against several possible matching patterns. It then executes an appropriate block of code, based on the first pattern that matches successfully. A switch statement provides an alternative to the if statement for responding to multiple potential states.  
 
-> Note: A switch statement considers a value and compares it against several possible matching patterns. It then executes an appropriate block of code, based on the first pattern that matches successfully. A switch statement provides an alternative to the if statement for responding to multiple potential states.  
+Every switch statement consists of multiple possible cases, each of which begins with the case keyword.  
+
+let's start with a simple switch over a character.  
+In our playground, underneath `//Switch Statement`, add:  
+```swift
+let someCharacter: Character = "z"
+switch someCharacter {
+case "a":
+    print("The first letter of the alphabet")
+case "z":
+    print("The last letter of the alphabet")
+default:
+    print("Some other character")
+}
+```  
 
 ####Ranges  
-####Switch over a Tuple  
+Ranges allow developers to specify a range. This is easier to show than to explain.  
+
+Underneath the above `switch` statement, let's add:
+```swift
+let approximateCount = 12
+
+let countDescription : String
+
+switch approximateCount {
+case 0:
+    countDescription = "none"
+case 1...5:
+    countDescription = "a few"
+case 5..<12:
+    countDescription = "several"
+case 12, 24, 36, 48:
+    countDescription = "dozens of"
+case 100..<1000:
+    countDescription = "hundreds of"
+default:
+    countDescription = "unknown"
+}
+```  
+
+Notice in the above `switch` statement, we can handle lots of different kinds of cases.  
+
+`case 12, 24, 36, 48:` shows that we can chain together different values and assign them the same functionality.  
+
+Range types:
+* `..<` - This range goes from the left value up to the right value, but noninclusive of the right value.  
+* `...` - Same as above but **inclusive** of the right value.  
+
+Following the above code, let's switch over a tuple.  
+```swift
+let somePoint = (1, 1)
+
+switch somePoint {
+case (0, 0):
+    print("(0, 0) is at the origin")
+case (_, 0):
+    print("(\(somePoint.0), 0) is on the x-axis")
+case (0, _):
+    print("(0, \(somePoint.1)) is on the y-axis")
+case (-2...2, -2...2):
+    print("(\(somePoint.0), \(somePoint.1)) is inside the box")
+default:
+    print("(\(somePoint.0), \(somePoint.1)) is outside of the box")
+}
+```  
+
+Notice that in the above switch, we access the values inside the tuple with a `.0` or `.1`. If you don't give default names to these parameters, this is how you would have to access them.  
+
+We can also restructure the above switch to make it easier to understand by changing it to the following:
+```swift
+let somePoint = (x: 1,y: 1)
+
+switch somePoint {
+case (0, 0):
+    print("(0, 0) is at the origin")
+case (_, 0):
+    print("(\(somePoint.x), 0) is on the x-axis")
+case (0, _):
+    print("(0, \(somePoint.y)) is on the y-axis")
+case (-2...2, -2...2):
+    print("(\(somePoint.x), \(somePoint.y)) is inside the box")
+default:
+    print("(\(somePoint.x), \(somePoint.y)) is outside of the box")
+}
+```  
+
+By giving the tuple named parameters, we can access these parameters as we would expect.  
+
 ####Optionals  
