@@ -435,4 +435,7 @@ default:
 
 By giving the tuple named parameters, we can access these parameters as we would expect.  
 
+At this point, your playground should look something like this:  
+![Imgur](http://i.imgur.com/62zC1fy.png)  
+
 ####Optionals  
