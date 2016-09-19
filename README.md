@@ -14,9 +14,15 @@ In `Swift3Workshop.playground`, on line `7`, under the `//Constants and Variable
 ```swift
 var myVariable = 42
 myVariable = 50
+```
+This is creating a variable in Swift. This variable is mutable, meaning we can change the value that is assigned to it.  
+
+Next, we will declare a constant, meaning it's value cannot be changed or mutated.  
+```swift
 let myConstant = 4
 myConstant = 10
 ```  
+
 Note the error we get  
 ![Imgur](http://i.imgur.com/wPWExau.png)
 
