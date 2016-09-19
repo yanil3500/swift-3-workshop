@@ -6,25 +6,24 @@
 
 ##Lab-1  
 ###Data Types  
-####Numeric Types  
-  
-  
-  * Strings  
-  * Type Inference  
-  * Tuples  
-* Collection Types  
-  * Sets  
-    * No Type Inference  
-  * Arrays  
-  * Dictionaries  
-* Control Flow  
-  * For-In Loops  
-    > Note: Deprecated traditional for loop.  
-    
-  * While Loops  
-  * Repeat While  
-  * If Statements  
-  * Switch Statements  
-    * Show Ranges  
-    * Switch over a Tuple  
-* Optionals  
+####Numeric Types    
+####Strings  
+####Type Inference  
+####Tuples  
+###Collection Types  
+####Sets  
+> No Type Inference  
+
+####Arrays  
+####Dictionaries  
+###Control Flow  
+####For-In Loops  
+> Note: Deprecated traditional for loop.  
+
+####While Loops  
+####Repeat While  
+####If Statements  
+####Switch Statements  
+#####Show Ranges  
+#####Switch over a Tuple  
+####Optionals  
