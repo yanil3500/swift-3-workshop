@@ -2,6 +2,9 @@
 
 import UIKit
 
+//Constants and Variables
+
+
 
 //Numeric Type
 
