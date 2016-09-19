@@ -81,7 +81,7 @@ let myDouble : Double = 1.234937987231234
 ```  
 
 Your playground should now look similar to the following:  
-![Imgur](http://i.imgur.com/lgCu6cc.png)
+![Imgur](http://i.imgur.com/MTLA3M1.png)  
 
 Play with the above values for a moment to get a feel for the accuracy of both.  
 
