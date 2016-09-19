@@ -41,6 +41,7 @@ tuple.description
 
 //Set
 
+let set: Set = [1, 2, 3, 4]
 
 
 //Array

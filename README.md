@@ -109,8 +109,6 @@ fullName = firstName + " " + lastName
 ```  
 
 There are many other powerful operations for String manipulation to look into. Check out the documentation here: [Swift 3 Programming Guide - Strings](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)  
-
-
 ##Tuples  
 > Note: A tuple is a type that represents data composed of more than one value of any type. Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.  
 
@@ -121,13 +119,32 @@ let tuple = (description: "Not Found", code: 401)
 Then access values in the tuple with the following:  
 ```swift
 tuple.description
-```  
+```
 
-###Collection Types  
-####Sets  
-> Sets do not have type inference. You must be explicit when declaring `Set` types.  
+##Collection Types  
+> Great resource for Collection Types: [Here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)  
+
+###Sets  
+> A set is an unordered collection of unique values of the same type. It can be extremely useful when you want to ensure that an item doesn't appear more than once in your collection, and the order of your items isn't important. Sets also do not have type inference. You **must** be explicit when declaring `Set` types.  
+
+In playground, under `//Set`, type the following:  
+```swift
+let set: Set = [1, 2, 3, 4]
+```
+
+> Note: One of the most powerful features of sets is their support of set operations, which let you combine two sets into one, create a set with only the common values of two sets, and more. 
+
+Here are some of the more powerful `Set` operations to research:
+* union(_:) `creates a new set with all the values of the two sets`  
+* intersection(_:) `creates a new set with only the values contained in both sets`  
+* subtract(_:) `creates a new set by removing values that appear in the second set`  
+* symmetricDifference(_:) `creates a new set with the values that appear in both of the sets, without duplicates`
+
+
+> For more information on these operations, visit the provided link to [Collection Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)  
 
 ####Arrays  
+
 ####Dictionaries  
 ###Control Flow  
 ####For-In Loops  
