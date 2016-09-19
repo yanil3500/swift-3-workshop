@@ -81,7 +81,7 @@ let myDouble : Double = 1.234937987231234
 ```  
 Play with the above values for a moment to get a feel for the accuracy of both.  
 
-####Strings  
+##Strings  
 > Note: A string is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the String type. The contents of a String can be accessed in various ways, including as a collection of Character values.
 
 In Playground, under `//String`, type the following:  
@@ -111,7 +111,7 @@ fullName = firstName + " " + lastName
 There are many other powerful operations for String manipulation to look into. Check out the documentation here: [Swift 3 Programming Guide - Strings](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)  
 
 
-####Tuples  
+##Tuples  
 > Note: A tuple is a type that represents data composed of more than one value of any type. Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.  
 
 In playground, under ``//Tuples`, type the following:  
