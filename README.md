@@ -28,6 +28,8 @@ myConstant = 10
 **Note the error we get:**  
 ![Imgur](http://i.imgur.com/wPWExau.png)  
 What does the error say?  
+> If you can't see the error details, click on the red error to the left of the line numbers. This will show a short description of the error.  
+
 Remove `myConstant = 10` to clear the error.  
 
 > As an iOS Developer, one of the best practices we follow is that every value we declare should start as a `let` constant. If you need to change the value, go back and make it a `var` declaration when needed.  This helps to make sure you never accidentally have a value change, or unnecessarily change a value that you did not intend to.  
