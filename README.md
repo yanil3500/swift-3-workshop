@@ -79,6 +79,10 @@ To give examples of the accuracy of `Double` and `Float`, add the following 2 li
 let myFloat : Float = 1.234937
 let myDouble : Double = 1.234937987231234
 ```  
+
+Your playground should now look similar to the following:  
+![Imgur](http://i.imgur.com/lgCu6cc.png)
+
 Play with the above values for a moment to get a feel for the accuracy of both.  
 
 ##Strings  
