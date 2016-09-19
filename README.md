@@ -12,7 +12,7 @@ This means you can use constants to name a value that you determine once but use
 
 
 
-####1. In `Swift3Workshop.playground`, under the `//Constants and Variables`. Type the following:  
+####1. In `Swift3Workshop.playground`, under `//Constants and Variables`. Type the following:  
 ```swift
 var myVariable = 42
 myVariable = 50
