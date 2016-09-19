@@ -9,9 +9,9 @@
 `brew install git`  
 
 ##Lab-1  
-> To get started, open the CFS3ToDoList.xcodeproj using Xcode 8, provided in this repository.  Open the project and ensure in Xcode that you are on the **lab-1** branch.
-![Imgur](http://i.imgur.com/3hl3ne1.png)
+> To get started, open the CFS3ToDoList.xcodeproj using Xcode 8, provided in this repository.  Open the project and ensure in Xcode that you are on the **lab-1** branch.  
 
+![Imgur](http://i.imgur.com/3hl3ne1.png)  
 
 In Playgrounds:  
 * Data Types  
