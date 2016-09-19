@@ -5,6 +5,6 @@
 1. Please make sure to have Xcode 8 downloaded and installed on your machine.  
 2. Make sure you have a [GitHub](https://github.com) account.  
 3. Fork this repo.  
-4. Make sure to have [Homebrew](http://brew.sh/) and **git** installed on your machine by running the following from the command line.  
+4. Make sure to have [Homebrew](http://brew.sh/) and **git** installed on your machine by running the following from the command line:  
 `brew install git`  
 
