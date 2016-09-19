@@ -5,7 +5,7 @@
 ####3. Click on `Swift3Workshop.playground` on the left  
 
 ##Lab-1  
-###Constants and Variables  
+##Constants and Variables  
 > Use `let` to make a constant and `var` to make a variable.  
 The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once.  
 This means you can use constants to name a value that you determine once but use in many places.  
@@ -34,7 +34,7 @@ Remove `myConstant = 10` to clear the error.
 
 > As an iOS Developer, one of the best practices we follow is that every value we declare should start as a `let` constant. If you need to change the value, go back and make it a `var` declaration when needed.  This helps to make sure you never accidentally have a value change, or unnecessarily change a value that you did not intend to.  
 
-###Type Inference  
+##Type Inference  
 > Note: You don’t always have to write types explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that myVariable and myConstant are integers because their initial values are integers.  
 
 On line **11**, Add the following:
