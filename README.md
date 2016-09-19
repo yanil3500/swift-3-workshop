@@ -214,7 +214,7 @@ The primary difference again being that the second dictionary has a starting val
 With the `let` declaration making the first dictionary immutable, this makes the first dictionary pretty useless...  
 
 Just as we saw with arrays, we can add new values to mutable dictionaries.  
-Try this on the line following the above declaration:
+Try this following the above declaration:
 ```swift
 dictionaryTwo["location"] =  "Home"
 ```  
@@ -227,14 +227,45 @@ We do this by adding the following line:
 dictionaryTwo["name"] =  "Earth"
 ```  
 
+> There are some very powerful uses for dictionaries. For more information of what they are capable of doing and what other methods they have, check out Apple's documentation here: [Dictionaries](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)  
+
 ##Control Flow  
+> Swift provides a variety of control flow statements. These include `while` loops, `if` statements, `switch` statements, and more to execute different branches of code based on certain conditions.
+
+> Swift also provides a `for-in` loop that makes it easy to iterate over arrays, dictionaries, ranges, strings, and other sequences.
+
 ###For-In Loops  
-> Note: Deprecated traditional for loop.  
+> Note: You use the for-in loop to iterate over a sequence, such as ranges of numbers, items in an array, or characters in a string. Swift 3 deprecated the traditional `for i` for loop.  
+
+Let's start by declaring a simple for loop that loops 5 times.
+In our playground, beneath the '//For-In Loop' line, let's add:
+```swift
+for index in 1...5 {
+    print("\(index) times 5 is \(index * 5)")
+}
+```  
+
+We can see that our loop runs 5 times and multiplies the `index` value by 5 each time.  
+We will talk more about the `...` a little later.  
+
+But now let's loop over the objects in one of our arrays from earlier.  
+Under the above `for-in` loop, type the following:
+```swift
+for value in intArray{
+    print(value)
+}
+```  
+As we can see in the console, this is looping through each number held in our `intArray`.  
+
+Your playground should resemble the following:  
+![Imgur](http://i.imgur.com/lVFLp4G.png)  
 
 ###While Loops  
 ###Repeat While  
 ###If Statements  
 ###Switch Statements  
+> > Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.  
+
 ####Ranges  
 ####Switch over a Tuple  
 ####Optionals  

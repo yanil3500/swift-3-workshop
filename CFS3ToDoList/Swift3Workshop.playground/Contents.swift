@@ -74,7 +74,13 @@ dictionaryTwo["name"] =  "Earth"
 
 //For-In Loop
 
+for index in 1...5 {
+    print("\(index) times 5 is \(index * 5)")
+}
 
+for value in intArray{
+    print(value)
+}
 
 //While Loop
 
