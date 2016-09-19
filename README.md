@@ -112,6 +112,16 @@ There are many other powerful operations for String manipulation to look into. C
 
 
 ####Tuples  
+> Note: A tuple is a type that represents data composed of more than one value of any type. Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.  
+
+In playground, under ``//Tuples`, type the following:  
+```swift
+let tuple: (description: String, code: Int) = (description: "Not Found", code: 401)
+```  
+Then access values in the tuple with the following:  
+```swift
+tuple.description
+```  
 
 ###Collection Types  
 ####Sets  
