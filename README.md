@@ -293,7 +293,7 @@ while counter <= 100 {
 `repeat-while` loops will always execute the code they contain at least once.  
 
 Let's try this.  
-Underneathe the `//Repeat While` type:
+Underneath the `//Repeat While` type:
 ```swift
 var repeatCount = 100
 
