@@ -12,7 +12,7 @@ This means you can use constants to name a value that you determine once but use
 
 
 
-####1. In `Swift3Workshop.playground`, on line 7, under the `//Constants and Variables`. Type the following:  
+####1. In `Swift3Workshop.playground`, under the `//Constants and Variables`. Type the following:  
 ```swift
 var myVariable = 42
 myVariable = 50
@@ -36,7 +36,7 @@ On line **11**, Add the following:
 ```swift
 let myName : String = "Adam"
 ```  
-Notice that this is how you explicitly tell the compiler that `myName` is a String. This is not neccessary in this case because the compiler can infer that this is a String based off of the initial value we give it. Change the above line to the following:  
+Notice that this is how you explicitly tell the compiler that `myName` is a String. This is not necessary in this case because the compiler can infer that this is a String based off of the initial value we give it. Change the above line to the following:  
 ```swift
 let myName = "Adam"
 ```  
