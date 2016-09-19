@@ -12,14 +12,14 @@ This means you can use constants to name a value that you determine once but use
 
 
 
-1. In `Swift3Workshop.playground`, on line `7`, under the `//Constants and Variables`. Type the following:  
+####1. In `Swift3Workshop.playground`, on line `7`, under the `//Constants and Variables`. Type the following:  
 ```swift
 var myVariable = 42
 myVariable = 50
-```
+```  
 This is creating a variable in Swift. This variable is mutable, meaning we can change the value that is assigned to it.  
 
-2. Next, we will declare a constant, meaning it's value cannot be changed or mutated.  
+####2. Next, we will declare a constant, meaning it's value cannot be changed or mutated.  
 ```swift
 let myConstant = 4
 myConstant = 10
