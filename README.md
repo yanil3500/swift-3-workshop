@@ -304,8 +304,48 @@ repeat{
 As you can see, `repeatCount` starts with a value well over 10, which is the condition of the loop. But we still get one execution of the code inside the repeat statement scope.  
 
 ###If Statements  
+> If statements in Swift are very much like `if` statements in other languages. In its simplest form, the if statement has a single if condition. It executes a set of statements only if that condition is true.  
+
+We will try a quick exaple of this.  
+In our playground, underneath `//If Statement`, insert the following code:  
+```swift
+var temperatureInFahrenheit = 30
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+}
+```  
+
+Now, let's change ` temperatureInFahrenheit` to be:  
+```swift
+var temperatureInFahrenheit = 50
+```  
+And we will add a simple else statement, making our if statement look like this:  
+```swift
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+} else {
+    print("It's not that cold. Wear a t-shirt.")
+}
+```  
+
+We can also additionally have `else if` statements that allow us to handle other specific situations. Let's add one to the above if.  
+
+Change the above `if` statement to the following:  
+```swift
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+} else if temperatureInFahrenheit == 0{
+    print("It's way too cold! Get inside!")
+} else {
+    print("It's not that cold. Wear a t-shirt.")
+}
+```  
+Now, if we manipulate the `temperatureInFahrenheit` value, we can see it handles each of our situations.  
+
 ###Switch Statements  
 > Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.  
+
+> Note: A switch statement considers a value and compares it against several possible matching patterns. It then executes an appropriate block of code, based on the first pattern that matches successfully. A switch statement provides an alternative to the if statement for responding to multiple potential states.  
 
 ####Ranges  
 ####Switch over a Tuple  

@@ -107,6 +107,14 @@ repeat{
 
 //If Statement
 
+var temperatureInFahrenheit = 50
+if temperatureInFahrenheit <= 32 {
+    print("It's very cold. Consider wearing a scarf.")
+} else if temperatureInFahrenheit == 0{
+    print("It's way too cold! Get inside!")
+} else {
+    print("It's not that cold. Wear a t-shirt.")
+}
 
 
 //Switch Statement
