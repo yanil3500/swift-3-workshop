@@ -10,20 +10,22 @@
 The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once.  
 This means you can use constants to name a value that you determine once but use in many places.  
 
-In `Swift3Workshop.playground`, on line `7`, under the `//Constants and Variables`. Type the following:  
+
+
+1. In `Swift3Workshop.playground`, on line `7`, under the `//Constants and Variables`. Type the following:  
 ```swift
 var myVariable = 42
 myVariable = 50
 ```
 This is creating a variable in Swift. This variable is mutable, meaning we can change the value that is assigned to it.  
 
-Next, we will declare a constant, meaning it's value cannot be changed or mutated.  
+2. Next, we will declare a constant, meaning it's value cannot be changed or mutated.  
 ```swift
 let myConstant = 4
 myConstant = 10
 ```  
 
-Note the error we get  
+**Note the error we get:**  
 ![Imgur](http://i.imgur.com/wPWExau.png)
 
 ####Type Inference  
