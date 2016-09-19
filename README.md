@@ -138,22 +138,69 @@ Here are some of the more powerful `Set` operations to research:
 * union(_:) `creates a new set with all the values of the two sets`  
 * intersection(_:) `creates a new set with only the values contained in both sets`  
 * subtract(_:) `creates a new set by removing values that appear in the second set`  
-* symmetricDifference(_:) `creates a new set with the values that appear in both of the sets, without duplicates`
+* symmetricDifference(_:) `creates a new set with the values that appear in both of the sets, without duplicates`  
 
+Back in our playground, write the following underneath the above `let set: Set = [1, 2, 3, 4]
+`:  
+```swift
+let setB: Set = [1,9,8,4,2,8]
+```  
+
+Then, observe what happens when we do the following:
+```swift
+let result = set.intersection(setB)
+```  
+
+As you may have guessed from the result on the right, this produced a brand new `Set` with only the values that both sets contain in common.  
 
 > For more information on these operations, visit the provided link to [Collection Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)  
 
-####Arrays  
+###Arrays  
+> An array is an ordered collection of values of the same type. The elements in the array are zero-indexed, which means the index of the first element is 0. Arrays are useful when you want to store your items in a particular order.  
 
-####Dictionaries  
-###Control Flow  
-####For-In Loops  
+In our playground, let's create a few different arrays in a few different ways!  
+Write the following underneath `//Array`:  
+```swift
+let stringsArray = [String]()
+let planetArray = ["Mars", “Jupiter"]
+var intArray = [Int](count: 5, repeatedValue: 0)
+```  
+
+> Note: You can also make all kinds of changes to mutable arrays: adding and removing elements, updating existing values, and moving elements around into a different order.
+
+Let's make some changes to the `intArray`  
+Add the following below the above declaration:  
+```swift
+intArray.append(100)
+intArray.append(10)
+intArray.insert(1000, at: 0)
+```  
+> Note: The above `insert(_:at:)` function inserts the value of `1000` at index: 0. Index 0 is referencing the first object in the array. Indexes always start at 0 and increase for each object in the array.
+
+Now that we've added some additional values, lets remove the `10` we added:  
+```swift
+intArray.remove(at: 7)
+```  
+
+> This not only removes the object at the specified index, but returns the value being removed in case the developer wants to do anything else with the removed value. 
+
+Let's change the above line to allow us to store the value we removed from the array.  
+Change the above line to the following:  
+```swift
+let removedValue = intArray.remove(at: 7)
+```  
+
+> Note: It is also good practice to make sure you never try to access a value that is "Out of Range". If you ever see a crash or error regarding this, this means that you have tried to access a value at an index that doesn't exist.  
+
+###Dictionaries  
+##Control Flow  
+###For-In Loops  
 > Note: Deprecated traditional for loop.  
 
-####While Loops  
-####Repeat While  
-####If Statements  
-####Switch Statements  
-#####Show Ranges  
-#####Switch over a Tuple  
+###While Loops  
+###Repeat While  
+###If Statements  
+###Switch Statements  
+####Ranges  
+####Switch over a Tuple  
 ####Optionals  

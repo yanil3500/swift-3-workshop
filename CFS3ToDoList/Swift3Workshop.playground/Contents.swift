@@ -43,9 +43,22 @@ tuple.description
 
 let set: Set = [1, 2, 3, 4]
 
+let setB: Set = [1,9,8,4,2,8]
+
+
+let result = set.intersection(setB)
+
 
 //Array
+let stringsArray = [String]()
+let planetArray = ["Mars", "Jupiter"]
+var intArray = [Int](repeating: 0, count: 5)
 
+intArray.append(100)
+intArray.append(10)
+intArray.insert(1000, at: 0)
+
+let removedValue = intArray.remove(at: 7)
 
 
 //Dictionary
