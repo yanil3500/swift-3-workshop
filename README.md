@@ -116,7 +116,7 @@ There are many other powerful operations for String manipulation to look into. C
 
 In playground, under ``//Tuples`, type the following:  
 ```swift
-let tuple: (description: String, code: Int) = (description: "Not Found", code: 401)
+let tuple = (description: "Not Found", code: 401)
 ```  
 Then access values in the tuple with the following:  
 ```swift

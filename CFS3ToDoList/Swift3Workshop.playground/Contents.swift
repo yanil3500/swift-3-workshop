@@ -31,11 +31,11 @@ var fullName : String
 fullName = firstName + " " + lastName
 
 
-//Type Inference
-
-
-
 //Tuple
+
+let tuple = (description: "Not Found", code: 401)
+
+tuple.description
 
 
 
