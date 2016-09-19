@@ -479,7 +479,7 @@ if let surveyAnswer = surveyAnswer{
     print(surveyAnswer)
 }
 ```  
-The above basically says if I can unwrap this value
+The above basically says if I can unwrap this value, then let me use it as a non-optional within the scope of the `if` statement.  
 
 
 
