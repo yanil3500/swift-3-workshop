@@ -82,11 +82,27 @@ for value in intArray{
     print(value)
 }
 
+for (key, value) in dictionaryTwo{
+    print("Key: \(key), Value: \(value)")
+}
+
+
 //While Loop
 
+var counter = 1
 
+while counter <= 100 {
+    //do some stuff
+    counter += 1
+}
 
 //Repeat While
+
+var repeatCount = 100
+
+repeat{
+    print("This will print at least once.")
+}while repeatCount < 10
 
 
 //If Statement

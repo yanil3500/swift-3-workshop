@@ -260,11 +260,52 @@ As we can see in the console, this is looping through each number held in our `i
 Your playground should resemble the following:  
 ![Imgur](http://i.imgur.com/lVFLp4G.png)  
 
-###While Loops  
-###Repeat While  
+For dictionaries, we can loop through and get a reference to both the *key* and *value*. Remember though that dictionaries are not sorted.  
+
+
+Below our previous loop, let's practice this by looping through our `dictionaryTwo`:  
+```swift
+for (key, value) in dictionaryTwo{
+    print("Key: \(key), Value: \(value)")
+}
+```  
+
+We can see that our matching keys and values are printed to the console.  
+
+###While Loops and Repeat While  
+> A while loop performs a set of statements until a condition becomes false. These kinds of loops are best used when the number of iterations is not known before the first iteration begins. Swift provides two kinds of while loops.
+
+1. `while` evaluates its condition at the start of each pass through the loop.  
+2. `repeat-while` evaluates its condition at the end of each pass through the loop.  
+
+In playground, let's find the section labeled `//While Loop`.  
+Then we can write the following:  
+```swift
+var counter = 1
+
+while counter <= 100 {
+    //do some stuff
+    counter += 1
+}
+```  
+
+`repeat-while` loops are exactly the same as `while` with one exception.  
+`repeat-while` loops will always execute the code they contain at least once.  
+
+Let's try this.  
+Underneathe the `//Repeat While` type:
+```swift
+var repeatCount = 100
+
+repeat{
+    print("This will print at least once.")
+}while repeatCount < 10
+```  
+As you can see, `repeatCount` starts with a value well over 10, which is the condition of the loop. But we still get one execution of the code inside the repeat statement scope.  
+
 ###If Statements  
 ###Switch Statements  
-> > Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.  
+> Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a switch case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a where clause for each case.  
 
 ####Ranges  
 ####Switch over a Tuple  
