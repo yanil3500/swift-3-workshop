@@ -54,19 +54,19 @@ This works great most of the time. But, be aware that the compiler cannot ALWAYS
 
 > Note: Swift provides signed and unsigned integers in 8, 16, 32, and 64 bit forms. These integers follow a naming convention similar to C, in that an 8-bit unsigned integer is of type UInt8, and a 32-bit signed integer is of type Int32. Like all types in Swift, these integer types have capitalized names.  
 
-> In most cases, you don’t need to pick a specific size of integer to use in your code. Swift provides an additional integer type, Int, which has the same size as the current platform’s native word size:
-
-  > On a 32-bit platform, Int is the same size as Int32.  
-  > On a 64-bit platform, Int is the same size as Int64.  
-
-> Unless you need to work with a specific size of integer, always use Int for integer values in your code. This aids code consistency and interoperability. Even on 32-bit platforms, Int can store any value between -2,147,483,648 and 2,147,483,647, and is large enough for many integer ranges.
-
 1. Under `//Numeric Type` in our playground, write the following: 
 ```swift
 let minValue = UInt8.min
 let maxValue = UInt8.max
 ```  
 This will show you the max and min values of the `UInt8` type.  
+
+> In most cases, you don’t need to pick a specific size of integer to use in your code. Swift provides an additional integer type, Int, which has the same size as the current platform’s native word size:
+
+  > On a 32-bit platform, Int is the same size as Int32.  
+  > On a 64-bit platform, Int is the same size as Int64.  
+
+> Unless you need to work with a specific size of integer, always use Int for integer values in your code. This aids code consistency and interoperability. Even on 32-bit platforms, Int can store any value between -2,147,483,648 and 2,147,483,647, and is large enough for many integer ranges.
 
 ###Floating Point Values  
 > Note: In Swift 3, `Double` represents a 64-bit floating-point number.
