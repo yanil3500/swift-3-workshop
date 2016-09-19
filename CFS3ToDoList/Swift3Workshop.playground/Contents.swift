@@ -23,17 +23,42 @@ let myDouble : Double = 1.234937987231234
 //String
 
 
+let firstName = "Adam"
+let lastName = "Wallraff"
+
+var fullName : String
+
+fullName = firstName + " " + lastName
+
 
 //Tuple
+
+let tuple = (description: "Not Found", code: 401)
+
+tuple.description
 
 
 
 //Set
 
+let set: Set = [1, 2, 3, 4]
+
+let setB: Set = [1,9,8,4,2,8]
+
+
+let result = set.intersection(setB)
 
 
 //Array
+let stringsArray = [String]()
+let planetArray = ["Mars", "Jupiter"]
+var intArray = [Int](repeating: 0, count: 5)
 
+intArray.append(100)
+intArray.append(10)
+intArray.insert(1000, at: 0)
+
+let removedValue = intArray.remove(at: 7)
 
 
 //Dictionary

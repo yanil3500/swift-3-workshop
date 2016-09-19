@@ -116,7 +116,7 @@ There are many other powerful operations for String manipulation to look into. C
 ##Tuples  
 > Note: A tuple is a type that represents data composed of more than one value of any type. Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.  
 
-In playground, under ``//Tuples`, type the following:  
+In playground, under `//Tuples`, type the following:  
 ```swift
 let tuple = (description: "Not Found", code: 401)
 ```  
@@ -195,6 +195,9 @@ let removedValue = intArray.remove(at: 7)
 ```  
 
 > Note: It is also good practice to make sure you never try to access a value that is "Out of Range". If you ever see a crash or error regarding this, this means that you have tried to access a value at an index that doesn't exist.  
+
+Your playground should, by this point, look similar to the following:  
+![Imgur](http://i.imgur.com/UoXLvie.png)  
 
 ###Dictionaries  
 ##Control Flow  
