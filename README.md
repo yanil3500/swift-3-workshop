@@ -290,7 +290,7 @@ while counter <= 100 {
 ```  
 
 `repeat-while` loops are exactly the same as `while` with one exception.  
-`repeat-while` loops will always execute the code they contain at least once.  
+`repeat-while` loops will **always** execute the code they contain at least once.  
 
 Let's try this.  
 Underneath the `//Repeat While` type:
