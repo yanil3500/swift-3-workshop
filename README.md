@@ -438,4 +438,59 @@ By giving the tuple named parameters, we can access these parameters as we would
 At this point, your playground should look something like this:  
 ![Imgur](http://i.imgur.com/62zC1fy.png)  
 
-####Optionals  
+##Optionals  
+> Optionals can be tricky, for more information I would recommend reading Apple's documentation on optionals [Here](https://developer.apple.com/reference/swift/optional).  
+
+> Swift introduced optional types, which handle the absence of a value. Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”. Using optionals is similar to using nil with pointers in Objective-C, but they work for any type, not just classes. Not only are optionals safer and more expressive than nil pointers in Objective-C, they are at the heart of many of Swift’s most powerful features.
+
+> You use optionals in situations where a value may be absent. An optional represents two possibilities: Either there is a value, and you can unwrap the optional to access that value, or there isn’t a value at all.  
+
+Navigate to the `//Optionals` portion of our playground.  
+
+We can define an optional String type here:
+```swift
+var surveyAnswer: String?
+```  
+
+Then, we can implement the following `if` statement to check if the value is `nil`:  
+```swift
+if surveyAnswer != nil{
+    print("SurveyAnswer is not nil.")
+}
+```  
+In our case, the value is nil because we never assigned it to a specific value.  
+Lets change that.  
+
+beteen the declaration of `var surveyAnswer: String?` and our `if` statement, lets assign a value to surveyAnswer:
+```swift
+surveyAnswer = "This was so much fun!!!"
+```  
+
+Your if statement should now hit and should show `SurveyAnswer is not nil.` on the right like so:
+![Imgur](http://i.imgur.com/spAuwpw.png)  
+
+####Optional Binding  
+> You use optional binding to find out whether an optional contains a value, and if so, to make that value available as a temporary constant or variable. Optional binding can be used with if and while statements to check for a value inside an optional, and to extract that value into a constant or variable, as part of a single action.  
+
+So, we can "unwrap" our optionals, by adding the following statement to the bottom of our playground:
+
+```swift
+if let surveyAnswer = surveyAnswer{
+    print(surveyAnswer)
+}
+```  
+The above basically says if I can unwrap this value
+
+
+
+
+
+
+
+
+
+
+
+
+
+

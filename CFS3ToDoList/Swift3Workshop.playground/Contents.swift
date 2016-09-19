@@ -165,4 +165,23 @@ default:
 
 //Optionals
 
+var surveyAnswer: String?
+
+surveyAnswer = "This was so much fun!!!"
+
+if surveyAnswer != nil{
+    print("SurveyAnswer is not nil.")
+}
+
+if let surveyAnswer = surveyAnswer{
+    print(surveyAnswer)
+}
+
+
+
+
+
+
+
+
 
