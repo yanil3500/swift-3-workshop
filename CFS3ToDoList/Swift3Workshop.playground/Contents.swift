@@ -63,6 +63,13 @@ let removedValue = intArray.remove(at: 7)
 
 //Dictionary
 
+let dictionaryOne = [String : String]()
+
+var dictionaryTwo = ["name" : "Mars"]
+
+dictionaryTwo["location"] =  "Home"
+
+dictionaryTwo["name"] =  "Earth"
 
 
 //For-In Loop

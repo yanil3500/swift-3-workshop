@@ -200,6 +200,33 @@ Your playground should, by this point, look similar to the following:
 ![Imgur](http://i.imgur.com/UoXLvie.png)  
 
 ###Dictionaries  
+> A dictionary is an unordered collection of pairs, where each pair is comprised of a key and a value. Dictionaries are useful when you want to look up values by means of an identifier. The same key can't appear twice in a dictionary, but different keys may point to the same value. All keys have to be of the same type and all values have to be of the same type.
+
+Let's take a look at how to declare a dictionary.  
+In your playground, underneath the `//Dictionary` comment, add:
+```swift
+let dictionaryOne = [String : String]()
+var dictionaryTwo = ["name" : "Mars"]
+```  
+Note that both of these lines declare a dictionary of type `[String: String]`.  
+
+The primary difference again being that the second dictionary has a starting value and the first is created but empty.  
+With the `let` declaration making the first dictionary immutable, this makes the first dictionary pretty useless...  
+
+Just as we saw with arrays, we can add new values to mutable dictionaries.  
+Try this on the line following the above declaration:
+```swift
+dictionaryTwo["location"] =  "Home"
+```  
+The above line adds a new *key* to `dictionaryTwo` called "location" and sets its value to be the String "Home".  
+
+This is great, but Mars isn't our home...At least for most of us.  
+So let's change the value for the "Name" key.  
+We do this by adding the following line:  
+```swift
+dictionaryTwo["name"] =  "Earth"
+```  
+
 ##Control Flow  
 ###For-In Loops  
 > Note: Deprecated traditional for loop.  
