@@ -2,7 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
 
 //Numeric Type
 
