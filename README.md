@@ -1,8 +1,8 @@
 ##Lab-1-prework  
-1. Open the CFS3ToDoList.xcodeproj using Xcode 8, provided in this repository.  
-2. Ensure in Xcode that you are on the **lab-1** branch.  
+###1. Open the CFS3ToDoList.xcodeproj using Xcode 8, provided in this repository.  
+###2. Ensure in Xcode that you are on the **lab-1** branch.  
 ![Imgur](http://i.imgur.com/3hl3ne1.png)  
-3. Click on `Swift3Workshop.playground`  
+###3. Click on `Swift3Workshop.playground`  
 
 ##Lab-1  
 ###Data Types  
