@@ -237,12 +237,41 @@ Your playground should now look like this:
 
 For more information on Extensions, read: [Apple Documentation - Extensions](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-ID151)  
 
-So, you may have noticed, but with our `DogYears` protocol, we implemented the `ageInDogYears` function in both our `Student` and `Dog` class.  
-One of the big benefits to extensions is that we can give our protocols default implementation. This means that if we wanted, we could make `ageInDogYears` not required. Then, any object that conforms to the `DogYears` protocol would have the functionality of `ageInDogYears` by default, unless they chose to implement it differently.  
+> So, you may have noticed, but with our `DogYears` protocol, we implemented the `ageInDogYears` function in both our `Student` and `Dog` class. One of the big benefits to extensions is that we can give our protocols default implementation. This means that if we wanted, we could make `ageInDogYears` not required. Then, any object that conforms to the `DogYears` protocol would have the functionality of `ageInDogYears` by default, unless they chose to implement it differently.  
 
-Back in our playground, find the `//Extensions` line and add the following:  
+Back in our playground, find the `DogYears` protocol declaration and add the following:  
 ```swift
+extension DogYears {
+    func ageInDogYears() -> Int{
+        return age * 7
+    }
+}
+```  
 
+Now we can remove the function from our `Student` class and `Dog` class.  
+
+At this point, your playground should look similar to this:  
+![Imgur](http://i.imgur.com/7rAtLgD.png)  
+
+> Note that either of the classes comforming to the `DogYears` protocol could reimplement the method to change its functionality.
+
+We can also use Extensions to extend classes that are not directly available to us.    
+
+In our playground, find the line `//Extension` and add the following:  
+```swift
+extension String{
+    
+    func length()-> Int{
+        return self.characters.count
+    }
+    
+}
+```    
+
+Now we can try using our extension with the following:  
+```swift
+let myString = "This is a test string"
+myString.length()
 ```  
 
 ##Functions  
@@ -267,4 +296,4 @@ Back in our playground, find the `//Extensions` line and add the following:
 
 2. Create a function that takes in a `String` and checks if it is a palindrome and returns a Bool(True or False).  
 
-3. 
+3. Create a new class of your choice that conforms to the `DogYears` protocol, but changes the default implementation.  
