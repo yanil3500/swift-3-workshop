@@ -1,14 +1,6 @@
 ##Lab-2-prework  
-####1. With the `CFS3ToDoList.xcodeproj` open in Xcode, go to the top menu bar and select source control.  
-####2. Select `commit` to commit the work you have done up to this point.  
-####3. Make sure to leave a detailed commit message for yourself.  
-####4. Once you have commited your changes, go back to the Source Control menu.
-####5. Hover over your project and select `Switch to Branch`.  
-####6. Select Lab-2. You may see all the lab-1 code jump into the project.  
-  > This is to ensure that all participants can keep pace with the workshop.  
-  
-####7. Ensure in Xcode that you are on the **lab-2** branch.  
-####8. Click on `Swift3Workshop.playground` on the left.  
+####1. Ensure in Xcode that you are on the **lab-2** branch.  
+####2. Click on `Swift3Workshop.playground` on the left.  
 
 ##Lab-1  
 ##Constants and Variables  
