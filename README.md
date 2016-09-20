@@ -340,6 +340,26 @@ addThese(numbers: 0,1,2,3,4,5)
 We should see a 15 on the left like so:  
 ![Imgur](http://i.imgur.com/Q2IHFyT.png)  
 
+> Functions can also be passed into other functions allowing us to create some new functionality to our programs.  
+
+In our playground, under the `addThese(numbers: 0,1,2,3,4,5)` line above, add the following:  
+```swift
+func changeStuff(number: Int, callback:(Int)->()){
+    callback(number * number)
+}
+```  
+Then, to use the function, we call it like this:  
+![Imgur](http://i.imgur.com/zkOql60.png)  
+
+Using auto complete to complete the function call, you should see something like this:  
+![Imgur](http://i.imgur.com/nmJ1hzU.png)  
+
+Now, with the `(Int)->()` highlighted, press enter.  
+This should "open" the callback function into a closure.  
+
+Your playground should look like this before moving forward:  
+![Imgur](http://i.imgur.com/xUl1UOd.png)  
+
 ##Closures  
 > A closure is simply a function with no name. You can assign them to variables and pass them around like any other value.  
 
