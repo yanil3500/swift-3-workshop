@@ -493,3 +493,13 @@ If this value is nil, the `if let` statement is passed over.
 2. Declare a tuple that can hold 4 values. These values should be called `x`, `y`, `width`, and `height`. Then write a corresponding switch statement to handle different cases of this tuple.  
 
 3. Declare a Dictionary of type `[Int: String]`. Give it some default values. Then, remove a value for a specific key. Lastly, once the value has been removed, print the count of objects in the Dictionary to the console. This will take some research.  
+
+##Before Continuing
+####1. With the `CFS3ToDoList.xcodeproj` open in Xcode, go to the top menu bar and select source control.  
+####2. Select `commit` to commit the work you have done up to this point.  
+####3. Make sure to leave a detailed commit message for yourself.  
+####4. Once you have commited your changes, go back to the Source Control menu.
+####5. Hover over your project and select `Switch to Branch`.  
+####6. Select Lab-2. You may see all the lab-1 code jump into the project.  
+  > This is to ensure that all participants can keep pace with the workshop.  
+  
