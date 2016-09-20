@@ -346,6 +346,8 @@ Now, if we manipulate the `temperatureInFahrenheit` value, we can see it handles
 > Swift’s switch statement is considerably more powerful than its counterpart in many C-like languages. Because the cases of a switch statement do not fall through to the next case in Swift, it avoids common C errors caused by missing break statements.  
 > A switch statement considers a value and compares it against several possible matching patterns. It then executes an appropriate block of code, based on the first pattern that matches successfully. A switch statement provides an alternative to the if statement for responding to multiple potential states.  
 
+> NOTE: All Switch statements must be exhaustive. This means that a majority of the time, you will need to account for a `default` case. As we will in the following demo.  
+
 Every switch statement consists of multiple possible cases, each of which begins with the `case` keyword.  
 
 let's start with a simple switch over a character.  
