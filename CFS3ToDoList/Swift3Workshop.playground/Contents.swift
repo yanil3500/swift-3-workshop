@@ -279,6 +279,28 @@ myString.length()
 
 //Functions
 
+func greet(person: String = "Errbody") -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}
+
+greet(person: "Adam")
+greet()
+
+
+func addThese(numbers: Int...)-> Int{
+    
+    var total = 0
+    
+    for number in numbers{
+        total += number
+    }
+    
+    return total
+}
+
+
+addThese(numbers: 0,1,2,3,4,5)
 
 
 //Default Parameter Values

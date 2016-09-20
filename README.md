@@ -275,15 +275,72 @@ myString.length()
 ```  
 
 ##Functions  
-> A function lets you define a block of code that performs a given task. Functions take can take in parameters and return values.
+> Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed. A function lets you define a block of code that performs a given task. Functions take can take in parameters and can return values.  
 
 > As we've already seen, you define a function using the `func` keyword. After that comes the name of the function, followed by `()`. After the parentheses comes an opening brace, followed by the code you want to run in the function, followed by a closing brace.
 
 > You can give your function parameters, which lets the function perform differently depending on the data passed into it via its parameters. Functions can also return a value. The caller of the function can assign the return value to a variable or constant.
 
-  * Default Parameter Values  
-  * Variadic Parameters  
-  
+In the playground, find the line `//Functions`.  
+Here, we can define the following function:  
+```swift
+func greet(person: String) -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}
+```  
+
+We can then test using our function with the following:  
+```swift
+greet(person: "Errbody")
+```
+
+> Functions can have default parameter values similar to what we did earlier with our initializer.  
+
+Change your function to look like this:
+```swift
+func greet(person: String = "Errbody") -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}
+```  
+We can see that there are now 2 ways to call this function by giving it a try.  
+Change `greet(person: "Errbody")` to:
+```swift
+greet(person: "Adam")
+greet()
+```  
+
+Your playground should look something like this:  
+![Imgur](http://i.imgur.com/CgeiCQh.png)  
+
+As you can see, we now have 2 independant ways of calling our `greet()` function.  
+
+> Along with default parameter values, we can also use something called **Variadic Parameters**.
+
+Under the above `greet()` line of code in our playground, write the following:  
+```swift
+func addThese(numbers: Int...)-> Int{
+    
+    var total = 0
+    
+    for number in numbers{
+        total += number
+    }
+    
+    return total
+}
+```
+
+Now we can use this function underneath the declaration as follows:  
+```swift
+addThese(numbers: 0,1,2,3,4,5)
+```  
+
+We should see a 15 on the left like so:  
+![Imgur](http://i.imgur.com/UfXD1Ir.png)  
+
+
 ##Closures  
 > A closure is simply a function with no name. You can assign them to variables and pass them around like any other value.  
 
