@@ -98,7 +98,7 @@ To initialize an empty String, you can do either of the following:
 var emptyString = ""
 var anotherEmptyString = String()
 ```  
-The 2nd uses the designated initializer of the String() type.  
+The 2nd uses the designated initializer of the `String()` type.  
 More on this later.  
 
 You can also use basic operators on String types to create new Strings.  
@@ -480,6 +480,15 @@ if let surveyAnswer = surveyAnswer{
 }
 ```  
 The above basically says if I can unwrap this value, then let me use it as a non-optional within the scope of the `if` statement.  
+
+If this value is nil, the `if let` statement is passed over.  
+
+####Coding Challenges
+> If you have extra time, here are some good challenges to attempt on your own. Please hold any questions related to these challenges till the end of the day to allow instructors to keep pace for the day.  
+
+1. Declare an array of strings containing all the names of the planets within our solar system. Create a for loop to iterate over each planet name. Inside the for loop, write an if statement that checks if the array contains a value for "Earth". If it does, print("YAY Earth!").  
+
+2. Declare a tuple that can hold 4 values. These values should be called `x`, `y`, `width`, and `height`. Then write a corres
 
 
 
