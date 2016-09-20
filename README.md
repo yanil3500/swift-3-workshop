@@ -1,7 +1,7 @@
 ##Lab-2-prework  
 ####1. Ensure in Xcode that you are on the **lab-2** branch.  
 ####2. Click on `Swift3Workshop.playground` on the left.  
-
+####3. Navigate to the section labeled with `//-----LAB-2-----//`  
 ##Lab-2  
 
 ##Classes & Structs  
