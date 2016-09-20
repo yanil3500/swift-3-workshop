@@ -195,7 +195,7 @@ if let surveyAnswer = surveyAnswer{
 
 
 
-//Inheritance(Simple Overview)
+//Inheritance
 
 
 
@@ -204,14 +204,6 @@ if let surveyAnswer = surveyAnswer{
 
 
 //Functions
-
-
-
-//Default Parameter Values
-
-
-
-//Variadic Parameters
 
 
 
