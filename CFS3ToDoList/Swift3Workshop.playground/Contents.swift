@@ -2,6 +2,8 @@
 
 import UIKit
 
+//-----LAB-1-COMPLETED-----//
+
 //Constants and Variables
 var myVariable = 42
 myVariable = 50
@@ -182,9 +184,42 @@ if let surveyAnswer = surveyAnswer{
 }
 
 
+//-----LAB-2-----//
+
+
+//Classes and Structs
 
 
 
+//Copy vs Reference
+
+
+
+//Protocols
+
+
+
+//Inheritance(Simple Overview)
+
+
+
+//Extensions
+
+
+
+//Functions
+
+
+
+//Default Parameter Values
+
+
+
+//Variadic Parameters
+
+
+
+//Closures
 
 
 

@@ -493,15 +493,3 @@ If this value is nil, the `if let` statement is passed over.
 2. Declare a tuple that can hold 4 values. These values should be called `x`, `y`, `width`, and `height`. Then write a corresponding switch statement to handle different cases of this tuple.  
 
 3. Declare a Dictionary of type `[Int: String]`. Give it some default values. Then, remove a value for a specific key. Lastly, once the value has been removed, print the count of objects in the Dictionary to the console. This will take some research.  
-
-
-
-
-
-
-
-
-
-
-
-
