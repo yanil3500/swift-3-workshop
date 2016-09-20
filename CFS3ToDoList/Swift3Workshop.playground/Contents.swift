@@ -230,13 +230,16 @@ myPerson.age
 //Protocols
 
 protocol DogYears{
+    
+    var age : Int { set get }
+    
     func ageInDogYears() -> Int
 }
 
 
 class Dog: DogYears{
     
-    let age = 1
+    var age = 1
     
     func ageInDogYears() -> Int {
         return age * 7
@@ -265,6 +268,14 @@ student1.studentID = "s786sf67822g29"
 
 //Extensions
 
+
+extension DogYears {
+    
+    func ageInDogYears(){
+        
+    }
+    
+}
 
 
 //Functions

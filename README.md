@@ -140,13 +140,17 @@ In our playground, find the line that reads `//Protocols`.
 Now, create the following protocol:  
 ```swift
 protocol DogYears{
+    var age : Int { set get }
+    
     func ageInDogYears() -> Int
 }
 ```  
 
 > This protocol specifies that it requires a function called `ageInDogYears` to be implemented. This means any type that conforms to this protocol needs to implement this function.  
 
-> We will get to more on functions in a moment.  
+> This protocol also specifies a required variable called `age`. To look more into variables and constants in your protocols, I recommend reading the Apple Documentation for protocols here: [Apple Documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-ID267).  
+
+> We will get to more on functions later.  
 
 Now, below the above protocol, we can create a new class.  
 Let's try the following:  
@@ -162,7 +166,7 @@ Change the `Dog` class to the following:
 ```swift
 class Dog: DogYears{
     
-    let age = 1
+    var age = 1
     
     func ageInDogYears() -> Int {
         return age * 7
@@ -229,11 +233,22 @@ Your playground should now look like this:
 > Note that inside the `ageInDogYears` function, we can access a property called `age`. This is because of the inheritance of `Student` from `Person`. `Person` has a property called `age` and because `Student` inherits from `Person`, `Student` also has an `age` property.  
 
 ##Extensions  
+> Extensions add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). Extensions are similar to categories in Objective-C.  
+
+For more information on Extensions, read: [Apple Documentation - Extensions](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-ID151)  
+
+So, you may have noticed, but with our `DogYears` protocol, we implemented the `ageInDogYears` function in both our `Student` and `Dog` class.  
+One of the big benefits to extensions is that we can give our protocols default implementation. This means that if we wanted, we could make `ageInDogYears` not required. Then, any object that conforms to the `DogYears` protocol would have the functionality of `ageInDogYears` by default, unless they chose to implement it differently.  
+
+Back in our playground, find the `//Extensions` line and add the following:  
+```swift
+
+```  
 
 ##Functions  
 > A function lets you define a block of code that performs a given task. Functions take can take in parameters and return values.
 
-> You define a function using the `func` keyword. After that comes the name of the function, followed by `()`. After the parentheses comes an opening brace, followed by the code you want to run in the function, followed by a closing brace.
+> As we've already seen, you define a function using the `func` keyword. After that comes the name of the function, followed by `()`. After the parentheses comes an opening brace, followed by the code you want to run in the function, followed by a closing brace.
 
 > You can give your function parameters, which lets the function perform differently depending on the data passed into it via its parameters. Functions can also return a value. The caller of the function can assign the return value to a variable or constant.
 
@@ -248,8 +263,8 @@ Your playground should now look like this:
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own. Please hold any questions related to these challenges till the end of the day to allow instructors to keep pace for the day.  
 
-1. 
+1. Create a function that takes in an array of `Int`'s, loops through them, and returns a sum of all the numbers as an `Int`.  
 
-2. 
+2. Create a function that takes in a `String` and checks if it is a palindrome and returns a Bool(True or False).  
 
 3. 
