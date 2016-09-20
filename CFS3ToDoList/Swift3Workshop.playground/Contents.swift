@@ -22,6 +22,10 @@ let myDouble : Double = 1.234937987231234
 
 //String
 
+let someString = "Some string literal value"
+
+var emptyString = ""
+var anotherEmptyString = String()
 
 let firstName = "Adam"
 let lastName = "Wallraff"
