@@ -380,7 +380,7 @@ In the above code, the closure is the:
 }
 ```  
 
-This essentially is where we provide the closures functionality to be passed into the `chageStuff` function.  
+This essentially is where we provide the closures functionality to be passed into the `changeStuff` function.  
 
 Because of the difficulty typically involved with understanding closures we practice and talk about them in heavy detail in the iOS 401 class.  
 
