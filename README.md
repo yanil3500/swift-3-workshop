@@ -490,7 +490,8 @@ If this value is nil, the `if let` statement is passed over.
 
 1. Declare an array of strings containing all the names of the planets within our solar system. Create a for loop to iterate over each planet name. Inside the for loop, write an if statement that checks if the array contains a value for "Earth". If it does, print("YAY Earth!").  
 
-2. Declare a tuple that can hold 4 values. These values should be called `x`, `y`, `width`, and `height`. Then write a corres
+2. Declare a tuple that can hold 4 values. These values should be called `x`, `y`, `width`, and `height`. Then write a corresponding switch statement to handle different cases of this tuple.  
+
 
 
 
