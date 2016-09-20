@@ -312,7 +312,7 @@ greet()
 ```  
 
 Your playground should look something like this:  
-![Imgur](http://i.imgur.com/CgeiCQh.png?1)  
+![Imgur](http://i.imgur.com/CgeiCQh.png)  
 
 As you can see, we now have 2 independant ways of calling our `greet()` function.  
 
@@ -339,7 +339,6 @@ addThese(numbers: 0,1,2,3,4,5)
 
 We should see a 15 on the left like so:  
 ![Imgur](http://i.imgur.com/Q2IHFyT.png)  
- 
 
 ##Closures  
 > A closure is simply a function with no name. You can assign them to variables and pass them around like any other value.  
