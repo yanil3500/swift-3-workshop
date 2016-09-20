@@ -80,6 +80,8 @@ class Person{
 
 The function that we have added is the `Person` initializer. This is what is called when a new instance of this object is created, or **initialized**. We will talk more about functions later.  
 
+> Note the use of `self` here. `self` in this context is referencing the new instance of this class. `self` is similar to `this` in JavaScript.
+
 Now, let's take a look at creating a new instance of our `Person` class.  
 Under the above `Person` class declaration add the following:  
 ```swift
