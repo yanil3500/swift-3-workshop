@@ -365,7 +365,7 @@ default:
 ```  
 
 ####Ranges  
-Ranges allow developers to specify a range. This is easier to show than to explain.  
+Ranges allow developers to specify a range. Let's take a look.  
 
 Underneath the above `switch` statement, let's add:
 ```swift
