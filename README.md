@@ -249,7 +249,7 @@ We can see that our loop runs 5 times and multiplies the `index` value by 5 each
 We will talk more about the `...` a little later.  
 
 But now let's loop over the objects in one of our arrays from earlier.  
-Under the above `for-in` loop, type the following:
+Under the above `for-in` loop, type the following:  
 ```swift
 for value in intArray{
     print(value)
