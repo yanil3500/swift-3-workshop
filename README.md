@@ -51,7 +51,7 @@ It won't be apparent until we take a look at implementing classes, but structs, 
 > Also note that structs give us a "free" initializer. We will discuss initializers in more detail in a moment.  
 
 ###Classes  
-> Classes are much like structures - they are named types, have stored properties and can define their own methods. Classes are reference types instead of value types. They have substantially different capabilities than structures.  
+> Classes are much like structures - they are named types, have stored properties and can define their own methods/functions. Classes are reference types instead of value types. They have substantially different capabilities than structures.  
 
 Below the above struct exercise, lets add a new class:
 ```swift
@@ -130,8 +130,103 @@ We can now see on the right that `myPerson.age` gives us 100.  This is because w
 > Note: This **copy** vs **reference** concept is important to keep in mind when designing your objects. If you don't pay attention to this, you can end up with issues where you are changing objects values that are not intended to be changed.  
 
 ##Protocols  
+> Swift protocols define a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. The protocol can then be adopted by a class, structure, or enumeration to provide an actual implementation of those requirements. Any type that satisfies the requirements of a protocol is said to conform to that protocol.  
+
+> Protocols allow us to create a kind of list of "rules" that any type adopting the protocol has to follow or implement. A way to define an interface or a template for an actual concrete type such as a struct or class or enumeration. With a protocol, you can define a common set of behaviors and then define the actual types that implement them.  
+
+A great resource for Protocols: [Apple Documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)  
+
+In our playground, find the line that reads `//Protocols`.  
+Now, create the following protocol:  
+```swift
+protocol DogYears{
+    func ageInDogYears() -> Int
+}
+```  
+
+> This protocol specifies that it requires a function called `ageInDogYears` to be implemented. This means any type that conforms to this protocol needs to implement this function.  
+
+> We will get to more on functions in a moment.  
+
+Now, below the above protocol, we can create a new class.  
+Let's try the following:  
+```swift
+class Dog: DogYears{
+    
+}
+```  
+Notice the error that we get. This is because we have not yet implemented the method/function required by the `DogYears` protocol.  
+
+Let's get the dog class to conform to the protocol.  
+Change the `Dog` class to the following:  
+```swift
+class Dog: DogYears{
+    
+    let age = 1
+    
+    func ageInDogYears() -> Int {
+        return age * 7
+    }
+}
+```  
+
+If you haven't already, notice that as you type, Xcode gives us a nice auto complete:  
+![Imgur](http://i.imgur.com/C0JNYs8.png)  
+
+This is a great tool to take advantage of as much as possible. To go with the auto complete suggestions, just simply press `Enter` when you have the method you want highlighted.  
+
+> We will see how we can have very powerful and dynamic protocols through extensions in a little bit.  
 
 ##Inheritance  
+> An important concept to understand when developing in Swift is **Inheritance**. Inheritance allows us to create complex objects that inherit functionality from a `superClass`. 
+
+Let's take a quick look at our `Person` class.  
+Now lets create a subclass of `Person` called `Student`.  
+`Student` will inherit the properties and methods of its superClass `Person`.  
+
+Find the `//Inheritance` line.  
+Beneath it add the following:  
+```swift
+class Student: Person{
+    
+    var studentID: String?
+    var classNumber: Int?
+    
+}
+```  
+
+This has just created a new Type called `Student`.  
+Now let's create an instance of a `Student`:  
+```swift
+let student1 = Student(name: "Mike")
+```  
+
+We can also now assign the `studentID` and `classNumber` we added to the class.  
+```swift
+student1.classNumber = 401
+student1.studentID = "s786sf67822g29"
+```  
+
+> It is important to know that in Swift there is a rule of **Single Inheritance**, meaning that an object can only have 1 superClass. But, we can continue to extend the functionality of objects using protocols and extensions(we will cover shortly).  
+
+Let's make our new `Student` class conform to the `DogYears` protocol.  
+Change your above implementation of the `Student` class to the following:  
+```swift
+class Student: Person, DogYears{
+    
+    var studentID: String?
+    var classNumber: Int?
+    
+    func ageInDogYears() -> Int {
+        return age * 7
+    }
+}
+```  
+
+Your playground should now look like this:  
+![Imgur](http://i.imgur.com/Fz2vsrr.png)  
+
+> Note that inside the `ageInDogYears` function, we can access a property called `age`. This is because of the inheritance of `Student` from `Person`. `Person` has a property called `age` and because `Student` inherits from `Person`, `Student` also has an `age` property.  
 
 ##Extensions  
 

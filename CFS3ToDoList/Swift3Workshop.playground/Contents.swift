@@ -229,10 +229,38 @@ myPerson.age
 
 //Protocols
 
+protocol DogYears{
+    func ageInDogYears() -> Int
+}
 
 
-//Inheritance(Simple Overview)
+class Dog: DogYears{
+    
+    let age = 1
+    
+    func ageInDogYears() -> Int {
+        return age * 7
+    }
+}
 
+
+//Inheritance
+
+class Student: Person, DogYears{
+    
+    var studentID: String?
+    var classNumber: Int?
+    
+    func ageInDogYears() -> Int {
+        return age * 7
+    }
+    
+}
+
+
+let student1 = Student(name: "Mike")
+student1.classNumber = 401
+student1.studentID = "s786sf67822g29"
 
 
 //Extensions
@@ -252,6 +280,7 @@ myPerson.age
 
 
 //Closures
+
 
 
 
