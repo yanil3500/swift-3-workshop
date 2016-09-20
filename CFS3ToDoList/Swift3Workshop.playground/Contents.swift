@@ -303,13 +303,6 @@ func addThese(numbers: Int...)-> Int{
 addThese(numbers: 0,1,2,3,4,5)
 
 
-//Default Parameter Values
-
-
-
-//Variadic Parameters
-
-
 
 //Closures
 

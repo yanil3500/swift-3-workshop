@@ -338,7 +338,7 @@ addThese(numbers: 0,1,2,3,4,5)
 ```  
 
 We should see a 15 on the left like so:  
-![Imgur](http://i.imgur.com/UfXD1Ir.png)  
+![Imgur](http://i.imgur.com/Q2IHFyT.png)  
 
 
 ##Closures  
