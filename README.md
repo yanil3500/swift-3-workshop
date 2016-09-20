@@ -384,6 +384,8 @@ This essentially is where we provide the closures functionality to be passed int
 
 Because of the difficulty typically involved with understanding closures we practice and talk about them in heavy detail in the iOS 401 class.  
 
+To read more on closures, read the Apple docs [Here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94).
+
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own. Please hold any questions related to these challenges till the end of the day to allow instructors to keep pace for the day.  
 
