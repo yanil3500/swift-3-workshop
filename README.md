@@ -361,9 +361,28 @@ Your playground should look like this before moving forward:
 ![Imgur](http://i.imgur.com/xUl1UOd.png)  
 
 ##Closures  
-> A closure is simply a function with no name. You can assign them to variables and pass them around like any other value.  
+> Closures are a difficult concept to understand for new Swift developers. A closure is really just a function with no name. You can assign them to variables and pass them around like any other value.  
 
 > Closures are so named because they have the ability to "close over" the variables and constants within the closure's own scope. This simply means that if a closure wants to access, store and manipulate the value of any variable or constant from the surrounding context, it can.  
+
+In the last screenshot above, we can see what a closure looks like.  
+Back in our playground, move the following code to be underneath the `//Closures` line.  
+```swift
+changeStuff(number: 10) { (results) in
+    
+}
+```  
+
+In the above code, the closure is the:
+```swift
+{ (results) in
+    
+}
+```  
+
+This essentially is where we provide the closures functionality to be passed into the `chageStuff` function.  
+
+Because of the difficulty typically involved with understanding closures we practice and talk about them in heavy detail in the iOS 401 class.  
 
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own. Please hold any questions related to these challenges till the end of the day to allow instructors to keep pace for the day.  

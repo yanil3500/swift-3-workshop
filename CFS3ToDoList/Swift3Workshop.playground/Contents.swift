@@ -309,13 +309,11 @@ func changeStuff(number: Int, callback:(Int)->()){
     
 }
 
+//Closures
+
 changeStuff(number: 10) { (results) in
     
 }
-
-
-//Closures
-
 
 
 
