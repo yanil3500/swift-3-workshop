@@ -238,7 +238,7 @@ dictionaryTwo["name"] =  "Earth"
 > Note: You use the for-in loop to iterate over a sequence, such as ranges of numbers, items in an array, or characters in a string. Swift 3 deprecated the traditional `for i` for loop.  
 
 Let's start by declaring a simple for loop that loops 5 times.
-In our playground, beneath the '//For-In Loop' line, let's add:
+In our playground, beneath the `//For-In Loop` line, let's add:
 ```swift
 for index in 1...5 {
     print("\(index) times 5 is \(index * 5)")
