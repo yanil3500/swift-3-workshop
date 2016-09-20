@@ -14,6 +14,7 @@
 * The size of a geometric shape, perhaps encapsulating a width property and a height property, both of type Double.  
 * A way to refer to ranges within a series, perhaps encapsulating a start property and a length property, both of type Int.  
 * A point in a 3D coordinate system, perhaps encapsulating x, y and z properties, each of type Double.  
+
 > In all other cases, define a class, and create instances of that class to be managed and passed by reference. In practice, this means that most custom data constructs should be classes, not structures.  
 
 ###Classes  
