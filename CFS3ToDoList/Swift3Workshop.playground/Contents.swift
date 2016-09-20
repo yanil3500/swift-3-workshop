@@ -189,11 +189,42 @@ if let surveyAnswer = surveyAnswer{
 
 //Classes and Structs
 
+struct ScreenLocation{
+    
+    var x: Int
+    var y: Int
+    
+}
+
+let location = ScreenLocation(x: 0, y: 0)
+
+var location2 = location
+location2.x = 10
+
+location2.x
+location.x
 
 
+class Person{
+    
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int = 0) {
+        self.name = name
+        self.age = age
+    }
+    
+}
 
-//Copy vs Reference
+let myPerson = Person(name: "Adam", age: 30)
 
+let myFriend = Person(name: "Joe")
+
+var otherPerson = myPerson
+
+otherPerson.age = 100
+myPerson.age
 
 
 //Protocols

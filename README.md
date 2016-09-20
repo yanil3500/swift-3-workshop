@@ -17,8 +17,115 @@
 
 > In all other cases, define a class, and create instances of that class to be managed and passed by reference. In practice, this means that most custom data constructs should be classes, not structures.  
 
+In our playground, find the `//Classes and Structs` line.  
+Let's start by defining a simple `struct`.  
+```swift
+struct ScreenLocation{  
+    var x: Int
+    var y: Int
+}
+```  
+
+Now we can test creating a new instance of this `ScreenLocation` struct.  
+Directly underneath the above declaration add:  
+```swift
+let location = ScreenLocation(x: 0, y: 0)
+```  
+
+> As mentioned earlier, we can see the copy on assignment by assigning our new location to another location.  
+
+Under the above line add the following:  
+```swift
+var location2 = location
+location2.x = 10
+
+location2.x
+location.x
+```  
+
+Your playground should now appear like the following:  
+![Imgur](http://i.imgur.com/pzLERtw.png)  
+
+It won't be apparent until we take a look at implementing classes, but structs, when assigned, create a copy. This is why we see that the 2 screen locations have different `x` values. This is what we would expect in this case.  
+
+> Also note that structs give us a "free" initializer. We will discuss initializers in more detail in a moment.  
+
 ###Classes  
-> Classes, which are much like structures - they are named types, have stored properties and can define their own methods. Classes are reference types instead of value types. They have substantially different capabilities than structures.  
+> Classes are much like structures - they are named types, have stored properties and can define their own methods. Classes are reference types instead of value types. They have substantially different capabilities than structures.  
+
+Below the above struct exercise, lets add a new class:
+```swift
+class Person{
+    var name: String
+    var age: Int
+}
+```  
+
+> Note that we get an **ERROR**. This is because with classes, we don't get a default initializer for "free". We are responsible for implementing the initializer ourselves.  
+
+Change the above `Person` class to add the following `init` function:
+```swift
+class Person{
+    
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+}
+```  
+
+The function that we have added is the `Person` initializer. This is what is called when a new instance of this object is created, or **initialized**. We will talk more about functions later.  
+
+Now, let's take a look at creating a new instance of our `Person` class.  
+Under the above `Person` class declaration add the following:  
+```swift
+let myPerson = Person(name: "Adam", age: 30)
+```  
+
+We can do some powerful things with initializers. Let's try changing the above `init(name: String, age: Int)` to the following:
+```swift
+class Person{
+    
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int = 0) {
+        self.name = name
+        self.age = age
+    }
+    
+}
+```  
+
+We have now added a default value to `age`. This means when creating new `Person` instances, we have 2 initializers built into 1. We can optionally create a `Person` with a `name` and `age`, or conversly, we can create a new `Person` with just a `name`, and the `age` would default to 0.  
+
+We can test this by adding creating another instance of `Person`:
+```swift
+let myFriend = Person(name: "Joe")
+```  
+
+Your playground should look similar to this:  
+![Imgur](http://i.imgur.com/yUVoJO8.png)  
+
+We can now see that we have 2 initializers made from the implementation of 1.  
+
+Again, we discussed how classes are **Reference** types. To demonstrate this we can do the following.  
+
+Beneath the declaration of `myFriend`, add:
+```swift
+var otherPerson = myPerson
+
+otherPerson.age = 100
+myPerson.age
+```  
+
+We can now see on the right that `myPerson.age` gives us 100.  This is because when we created `otherPerson` and assigned it to `myPerson`, instead of making a new "copy" like our struct did, it assigned a new **reference** to `myPerson` called `otherPerson`. This means that both variables are pointing to the same object in memory, so if you change one, it affects both.  
+
+> Note: This **copy** vs **reference** concept is important to keep in mind when designing your objects. If you don't pay attention to this, you can end up with issues where you are changing objects values that are not intended to be changed.  
 
 ##Protocols  
 
