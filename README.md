@@ -4,6 +4,11 @@
 
 ##Lab-2  
 
+##UILabel  
+##UITextField  
+##UITabbarController  
+##UIButton  
+##Segues  
 ##UserDefaults  
 ##Animations  
 
