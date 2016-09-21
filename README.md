@@ -5,7 +5,7 @@
 ##Lab-3  
 > In this lab we will start to build out what will become a ToDo list Application. This lab will help to teach the most-commonly used UIKit elements.  
 
-> Before we get started I would recommend if you are not Familiar with the concept of MVC, to read this article: [MVC](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)  
+> Before we get started I would recommend if you are not Familiar with the concept of MVC, to read this article: [MVC Design Pattern](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)  
 
 > From this point forward, I may refer to specific types as as either Model, View or Controller objects.
 
