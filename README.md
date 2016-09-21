@@ -14,6 +14,58 @@
 Following the MVC design pattern, you're file structure should appear similar to this:  
 ![Imgur](http://i.imgur.com/6UMSbGF.png)  
 
+
+##Building Our Model  
+First we need to create out Todo class.  
+
+In Xcode, we will create a new seperate swift file for this class and add it to our **Model** group.  
+To do this, we can use a shortcut for creating new files, `cmd+N`, or we can use the menu bar and navigate to *File > New > File...*:  
+![Imgur](http://i.imgur.com/XMsTzWQ.png)  
+
+Now we can select *Swift File* from the menu:  
+![Imgur](http://i.imgur.com/wtXbLqu.png)  
+
+Create your new file and name it `Todo`.  
+We should now have an empty `.swift` file to work with.  
+![Imgur](http://i.imgur.com/lTFi3OR.png)  
+
+Lets create our `Todo` class.  
+
+We will define the class underneath the `import Foundation` line.  
+
+Type the following:
+```swift
+class Todo{
+    
+    var text: String
+    
+    init(text: String) {
+        self.text = text
+    }
+    
+}
+```  
+
+We will need a way to identify each Todo item later, so lets create another new `Swift File` called `Identity`. 
+
+`Identity` will be a simple protocol that will require a single method called `identifier()`.  
+
+In **Identity.swift**, add the following code below your imports:  
+```swift
+protocol Identity{
+    func identifier() -> String
+}
+
+extension Identity{
+    func identifier() -> String{
+        return UUID().uuidString
+    }
+}
+```  
+
+> Note that as we discussed earlier, we can declare our methods within the protocol declaration, but can also provide default behavior to our protocols through extensions.  
+
+
 ##UIView  
 > The UIView class defines a rectangular area on the screen and the interfaces for managing the content in that area.  
 
@@ -57,7 +109,7 @@ When you are done researching, we can remove the `self.view` code from before.
 > There are 2 primary types of view controllers. There are **content** view controllers that present content to the user, and there are **container** view controllers that manage other view controllers and how they are displayed to the user.  
 
 ##UINavigationController  
-> UINavigationController is a container view controller.
+> UINavigationController is a container view controller. It manages *child* view controllers. It's "children" 
 
 ##UITableView  
 ##UITableViewCell  
