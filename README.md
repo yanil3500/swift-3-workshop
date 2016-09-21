@@ -3,7 +3,7 @@
 ####2. In the left menu, expand the folders - Controllers and Storyboards  
 
 ##Lab-3  
-> In this lab we will start to build out what will become a ToDo list Application. This lab will help to teach the most-commonly used UIKit elements.  
+> In this lab we will start to build out a ToDo list Application. This lab will help to teach the most-commonly used UIKit elements.  
 
 > Before we get started I would recommend if you are not Familiar with the concept of MVC, to read this article: [MVC Design Pattern](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)  
 
@@ -38,7 +38,7 @@ For more on View Controllers, read Apple's [View Controller Programming Guide fo
 
 We can explore our View Controller's root UIView.  
 To do this, give yourself some space within the scope of the `viewDidLoad` function.  
-Add the following line of code:
+Add the following line of code:  
 ```swift
 self.view
 ```  
@@ -54,7 +54,11 @@ If you go to the bottom of this window, you can click on *Property Reference* at
 
 When you are done researching, we can remove the `self.view` code from before.  
 
+> There are 2 primary types of view controllers. There are **content** view controllers that present content to the user, and there are **container** view controllers that manage other view controllers and how they are displayed to the user.  
+
 ##UINavigationController  
+> UINavigationController is a container view controller.
+
 ##UITableView  
 ##UITableViewCell  
 
