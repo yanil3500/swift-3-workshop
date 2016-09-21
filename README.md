@@ -9,7 +9,7 @@
 
 > From this point forward, I may refer to specific types as as either Model, View or Controller objects.
 
-> I would also recommend setting up your file structure on the left to follow this convention to keep consistent with the rest of this tutorial, but it is not a requirement.  
+> I would also recommend setting up your file structure on the left to follow this convention and to keep consistent with the rest of this tutorial, but it is not a requirement.  
 
 Following the MVC design pattern, you're file structure should appear similar to this:  
 ![Imgur](http://i.imgur.com/6UMSbGF.png)  
@@ -29,11 +29,7 @@ Create your new file and name it `Todo`.
 We should now have an empty `.swift` file to work with.  
 ![Imgur](http://i.imgur.com/lTFi3OR.png)  
 
-Lets create our `Todo` class.  
-
-We will define the class underneath the `import Foundation` line.  
-
-Type the following:
+We will define the class underneath the `import Foundation` line by typing the following:
 ```swift
 class Todo{
     
