@@ -26,7 +26,7 @@ class TodoList{
         }
     }
     
-    func removeAllObjects(){
+    func removeAll(){
         self.allTodos.removeAll()
     }
     
@@ -45,38 +45,4 @@ class TodoList{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//
 

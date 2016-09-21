@@ -129,6 +129,35 @@ func add(todo: Todo){
 > As we saw earlier, this will allow us to add items to our `allTodos` array.  
 
 Next, we will add our `remove(todo:)` function right below the above `add` function.  
+```swift
+func remove(todo: Todo){
+        self.allTodos = self.allTodos.filter{ (item) -> Bool in
+            return item.identifier != todo.identifier
+        }
+    }
+```  
+> The `filter` function provides a closure for us to do some processing of the objects in the array. This is an example of what is called a higher order function. This is something we go into detail about in the iOS 401. But, for more information on Swift higher order functions, check out this article:[Higher Order Functions](https://www.weheartswift.com/higher-order-functions-map-filter-reduce-and-more/)  
+
+Now, let's add the `removeAll`, `getTodoAt`, and `count` functions below the `remove` function:  
+```swift
+func removeAll(){
+    self.allTodos.removeAll()
+}
+
+func getTodoAt(index: Int) -> Todo{
+    return self.allTodos[index]
+}
+
+func count() -> Int{
+    return self.allTodos.count
+}
+```  
+
+> All of these functions should be fairly straight-forward. They access and manipulate the data for us on the `allTodos` array.
+
+Your `TodoList` class should now look like this:  
+![Imgur](http://i.imgur.com/TJvuCpb.png)  
+
 
 
 ##UIView  
