@@ -110,7 +110,7 @@ private init(){}
 ```  
 
 At this point your `TodoList` class should look like this:  
-![Imgur](http://i.imgur.com/UuomNGz.png)  
+![Imgur](http://i.imgur.com/bXSUJzr.png)  
 
 Now, we have 5 Methods we need to add to this class.  
 1. `add(todo:)`
@@ -129,7 +129,6 @@ func add(todo: Todo){
 > As we saw earlier, this will allow us to add items to our `allTodos` array.  
 
 Next, we will add our `remove(todo:)` function right below the above `add` function.  
-
 
 
 ##UIView  
