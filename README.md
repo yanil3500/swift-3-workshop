@@ -113,11 +113,11 @@ At this point your `TodoList` class should look like this:
 ![Imgur](http://i.imgur.com/bXSUJzr.png)  
 
 Now, we have 5 Methods we need to add to this class.  
-1. `add(todo:)`
-2. `remove(todo:)`
-3. `removeAll`
-4. `getTodoAt(index:)`
-5. `count()`
+1. `add(todo:)`  
+2. `remove(todo:)`  
+3. `removeAll`  
+4. `getTodoAt(index:)`  
+5. `count()`  
 
 First, lets add our `add(todo:)` function:  
 ```swift
