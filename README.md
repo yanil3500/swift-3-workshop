@@ -46,7 +46,7 @@ class Todo{
 }
 ```  
 
-We will need a way to identify each Todo item later, so lets create another new `Swift File` called `Identity`. 
+We will need a way to identify each Todo item later, so lets create another new **Swift File** called `Identity`. 
 
 `Identity` will be a simple protocol that will require a single variable called `identifier`.  
 
@@ -70,14 +70,72 @@ We can also add the following line inside our `init`:
 self.identifier = UUID().uuidString
 ```  
 
+> The above line uses the UUID Struct to get a unique ID string for our `identifier` variable.  
+
 At this point, your `Todo` class should resemble the following:  
 ![Imgur](http://i.imgur.com/wYhZpDr.png)  
+
+Now we need to create a `TodoList`.  
+This class will manage adding, removing, and storing our `Todo` items.  
+
+Create a new swift file called `TodoList`.  
+Click on the `TodoList.swift` file and under the `import Foundation` add:  
+```swift
+class TodoList{
+    
+   var allTodos = [Todo]()
+    
+}
+```  
+
+> This will create a new class type called `TodoList`. We also add an array of `Todo` objects. This will be all of our `Todo`'s the user adds.
+
+Next, we will make this class a singleton.  
+
+> Singletons are a design pattern that is common in most languages. This means that there will be only 1 single instance of this class called `shared` that we can access anywhere in our application. This instance is created the first time the `shared` instance is accessed. Singletons should be used sparingly and are just one way of passing data around in your applications.  
+
+> For more information on singleton pattern in iOS, check out this article. Keep in mind the article was written before Swift 3 but is still relevant: [Swift Singletons](http://krakendev.io/blog/the-right-way-to-write-a-singleton)  
+
+Add the following line inside your class declaration, above the `allTodos` array:  
+```swift
+static let shared = TodoList()
+```  
+
+> The static keyword means that this applies to the type itself, not any particular instance of the class. This will make more sense when we use `shared` later in this tutorial.  
+
+We also want to make sure that only **1** instance of this class gets created so we will add a private initializer.  
+
+```swift
+private init(){}
+```  
+
+At this point your `TodoList` class should look like this:  
+![Imgur](http://i.imgur.com/UuomNGz.png)  
+
+Now, we have 5 Methods we need to add to this class.  
+1. `add(todo:)`
+2. `remove(todo:)`
+3. `removeAll`
+4. `getTodoAt(index:)`
+5. `count()`
+
+First, lets add our `add(todo:)` function:  
+```swift
+func add(todo: Todo){
+    self.allTodos.append(todo)
+}
+```  
+
+> As we saw earlier, this will allow us to add items to our `allTodos` array.  
+
+Next, we will add our `remove(todo:)` function right below the above `add` function.  
+
 
 
 ##UIView  
 > The UIView class defines a rectangular area on the screen and the interfaces for managing the content in that area.  
 
-> UIViews are how we typically display content to the user.
+> UIViews are how we typically display content to the user.  
 
 > Every UIView can be a subview of another UIView, or have other UIView’s as children. You can think of the view hierarchy similar to a family tree.  
 

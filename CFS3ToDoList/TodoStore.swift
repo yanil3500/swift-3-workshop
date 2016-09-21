@@ -9,38 +9,73 @@
 import Foundation
 
 class TodoList{
+    
     static let shared = TodoList()
     
     var allTodos = [Todo]()
-
     
     private init(){}
     
-    
-    func add(object: Todo)
-    {
-        self.allTodos.append(object)
+    func add(todo: Todo){
+        self.allTodos.append(todo)
     }
     
-    func remove(item: Todo)
-    {
-        self.allTodos = self.allTodos.filter({ (todo) -> Bool in
-            return todo.identifier() != item.identifier()
-        })
+    func remove(todo: Todo){
+        self.allTodos = self.allTodos.filter{ (item) -> Bool in
+            return item.identifier != todo.identifier
+        }
     }
     
-    func removeAllObjects()
-    {
+    func removeAllObjects(){
         self.allTodos.removeAll()
     }
     
-    func objectFor(index: Int) -> Todo
-    {
+    func getTodoAt(index: Int) -> Todo{
         return self.allTodos[index]
     }
     
-    func count() -> Int
-    {
+    func count() -> Int{
         return self.allTodos.count
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+
