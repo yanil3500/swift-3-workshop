@@ -25,7 +25,7 @@ class TodoList{
     func remove(item: Todo)
     {
         self.allTodos = self.allTodos.filter({ (todo) -> Bool in
-            return todo.identifier != item.identifier
+            return todo.identifier() != item.identifier()
         })
     }
     

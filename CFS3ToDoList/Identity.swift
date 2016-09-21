@@ -8,12 +8,7 @@
 
 import Foundation
 
-protocol Identity{
-    func identifier() -> String
-}
-
-extension Identity{
-    func identifier() -> String{
-        return UUID().uuidString
-    }
+protocol Identity
+{
+    var identifier: String { set get }
 }

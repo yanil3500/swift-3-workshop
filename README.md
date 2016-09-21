@@ -5,7 +5,7 @@
 ##Lab-3  
 > In this lab we will start to build out a ToDo list Application. This lab will help to teach the most-commonly used UIKit elements.  
 
-> Before we get started I would recommend if you are not Familiar with the concept of MVC, to read this article: [MVC Design Pattern](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)  
+> Before we get started I would recommend if you are not familiar with the concept of MVC, to read this article: [MVC Design Pattern](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)  
 
 > From this point forward, I may refer to specific types as as either Model, View or Controller objects.
 
@@ -18,7 +18,7 @@ Following the MVC design pattern, you're file structure should appear similar to
 ##Building Our Model  
 First we need to create out Todo class.  
 
-In Xcode, we will create a new seperate swift file for this class and add it to our **Model** group.  
+In Xcode, we will create a new separate swift file for this class and we will add it to our **Model** group.  
 To do this, we can use a shortcut for creating new files, `cmd+N`, or we can use the menu bar and navigate to *File > New > File...*:  
 ![Imgur](http://i.imgur.com/XMsTzWQ.png)  
 
@@ -48,22 +48,30 @@ class Todo{
 
 We will need a way to identify each Todo item later, so lets create another new `Swift File` called `Identity`. 
 
-`Identity` will be a simple protocol that will require a single method called `identifier()`.  
+`Identity` will be a simple protocol that will require a single variable called `identifier`.  
 
 In **Identity.swift**, add the following code below your imports:  
 ```swift
-protocol Identity{
-    func identifier() -> String
-}
-
-extension Identity{
-    func identifier() -> String{
-        return UUID().uuidString
-    }
+protocol Identity
+{
+    var identifier: String { set get }
 }
 ```  
 
-> Note that as we discussed earlier, we can declare our methods within the protocol declaration, but can also provide default behavior to our protocols through extensions.  
+> The above is saying in order to conform to the `Identity` protocol, we must implement a variable called `identifier` and are responsible for its setter and getters. For more on `set` and `get`, read more into protocols here: [Apple documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html) - Scroll down to **Property Requirements**.  
+
+Now, back in out `Todo.swift` file, inside out `Todo` class, lets add the required variable for the `Identity` protocol.  
+```swift
+var identifier: String
+```  
+
+We can also add the following line inside our `init`:
+```swift
+self.identifier = UUID().uuidString
+```  
+
+At this point, your `Todo` class should resemble the following:  
+![Imgur](http://i.imgur.com/wYhZpDr.png)  
 
 
 ##UIView  
