@@ -73,7 +73,7 @@ self.identifier = UUID().uuidString
 > The above line uses the UUID Struct to get a unique ID string for our `identifier` variable.  
 
 At this point, your `Todo` class should resemble the following:  
-![Imgur](http://i.imgur.com/wYhZpDr.png)  
+![Imgur](http://i.imgur.com/6TSx0GR.png)  
 
 Now we need to create a `TodoList`.  
 This class will manage adding, removing, and storing our `Todo` items.  
