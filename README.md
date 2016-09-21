@@ -394,3 +394,12 @@ To read more on closures, read the Apple docs [Here](https://developer.apple.com
 2. Create a function that takes in a `String` and checks if it is a palindrome and returns a Bool(True or False).  
 
 3. Create a new class of your choice that conforms to the `DogYears` protocol, but changes the default implementation.  
+
+##Before Continuing  
+####1. With the `CFS3ToDoList.xcodeproj` open in Xcode, go to the top menu bar and select source control.  
+####2. Select `commit` to commit the work you have done up to this point.  
+####3. Make sure to leave a detailed commit message for yourself.  
+####4. Once you have committed your changes, go back to the Source Control menu.  
+####5. Hover over your project and select `Switch to Branch`.  
+####6. Select Lab-3. You may see all the lab-2 code jump into the project.  
+  > This is to ensure that all participants can keep pace with the workshop.  
