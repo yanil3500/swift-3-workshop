@@ -7,6 +7,24 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="seh-sj-gaI">
+            <objects>
+                <viewController id="BYt-CW-zVl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gY8-0R-8OX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ewj-j8-70h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="okr-zR-dD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKR-qJ-xzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="-528"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CFS3ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,9 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bu3-6T-m9j">
-                                <frame key="frameInset" minY="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bu3-6T-m9j">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="gQp-3B-TLC" style="IBUITableViewCellStyleDefault" id="0bg-IV-3HM">
@@ -44,8 +60,20 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bu3-6T-m9j" secondAttribute="bottom" id="R6A-My-kfI"/>
+                            <constraint firstItem="bu3-6T-m9j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aVL-DJ-uLe"/>
+                            <constraint firstAttribute="trailing" secondItem="bu3-6T-m9j" secondAttribute="trailing" id="iNe-bM-mfQ"/>
+                            <constraint firstItem="bu3-6T-m9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z22-Fy-HmG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bTU-xs-xWc"/>
+                    <navigationItem key="navigationItem" id="bTU-xs-xWc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ltw-Ik-DuM">
+                            <connections>
+                                <segue destination="BYt-CW-zVl" kind="presentation" id="7x6-OE-twX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bu3-6T-m9j" id="2RR-pl-vZA"/>
                     </connections>
