@@ -210,12 +210,41 @@ There are 2 ways to incorporate a UINavigationController into your application. 
 
 > In the iOS 401, we spend an entire week building out an application programmatically, including the user interface.  
 
-On the left, click on **main.storyboard**. You should now see something similar to this:  
+On the left, click on **Main.storyboard**. You should now see something similar to this:  
 ![Imgur](http://i.imgur.com/sBaYTy8.png)  
 
+Now, click on the top bar of the UIViewController:  
+![Imgur](http://i.imgur.com/ShhBqIr.png)  
 
+Then up in the menu bar, navigate to *Editor > Embed In > Navigation Controller*.  
+![Imgur](http://i.imgur.com/ekh8tCt.png)  
+
+Your storyboard should now look like this:  
+![Imgur](http://i.imgur.com/7l6RmXZ.png)  
 
 ##UITableView  
+
+> A table view displays a list of items in a single column. UITableView is a subclass of UIScrollView, which allows users to scroll through the table, although UITableView allows vertical scrolling only. A table view is made up of zero or more sections, each with its own rows. Sections are identified by their index number within the table view, and rows are identified by their index number within a section. Any section can optionally be preceded by a section header, and optionally be followed by a section footer.
+
+> For today's workshop we are going to build a dynamic tableview that populates a given number of cells depending on the number of todo's the user creates.
+
+In `Main.storyboard`, zoom in a bit to your ViewController, **NOT** the Navigation Controller.  
+You should see something similar to this:  
+![Imgur](http://i.imgur.com/YdsREo9.png)  
+
+Drag out a tableView from the bottom right list of UIElements in Xcode:  
+![Imgur](http://i.imgur.com/tfGX2sf.png)  
+
+Place the tableView on top of the ViewController like this:
+![Imgur](http://i.imgur.com/7KD3Zd1.png)  
+
+Drag the corner edges of the tableview to fill the ViewController from below the navigation bar to the bottom like this:  
+![Imgur](http://i.imgur.com/xbGB1R7.png)  
+
+if you see a gap at the top of your tableview, click on the top bar of your ViewController to highlight it.  
+Go to the attributes inspector on the right, and make sure that *Adjust Scroll View Insets* is unchecked.  
+![Imgur](http://i.imgur.com/OTZLRAm.png)  
+
 ##UITableViewCell  
 
 ####Coding Challenges  
