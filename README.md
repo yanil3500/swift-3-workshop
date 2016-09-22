@@ -348,7 +348,7 @@ self.tableView.dataSource = self
 ```  
 
 Your `ViewController.swift` class should now look similar to this:  
-![Imgur](http://i.imgur.com/0Sav9FY.png)  
+![Imgur](http://i.imgur.com/uEASOhM.png)    
 
 Now we are almost done. We just need to give ourselves some starting `Todo` items so we can see them displayed in the `tableView`.  
 
@@ -362,7 +362,7 @@ for number in 1...5{
 
 > This will give us 5 default "Todo" objects to populate our table with.  
 
-Build and run to see the result!  
+Build and run to see the result.  
 
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own.  

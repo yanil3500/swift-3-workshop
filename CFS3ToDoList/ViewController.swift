@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource {
             TodoList.shared.add(todo: todo)
         }
         
-        
     }
 
     override func didReceiveMemoryWarning() {
