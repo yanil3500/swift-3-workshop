@@ -44,8 +44,7 @@ We will continue to use Auto Layout to manage the layout of our UI for the durat
 > A UIStoryboardSegue object is responsible for performing the visual transition between two view controllers. In addition, segue objects are used to prepare for the transition from one view controller to another. Segue objects contain information about the view controllers involved in a transition. When a segue is triggered, but before the visual transition occurs, the storyboard runtime calls the current view controller’s prepareForSegue:sender: method so that it can pass any needed data to the view controller that is about to be displayed.  
 
 In storyboard, go to our ViewController.  
-In the bottom right list of UIElements, search for **button**:  
-!  
+In the bottom right list of UIElements, search for **button**.  
 
 Drag out a **Bar Button Item** and drop onto the right side of the navigation bar on the `ViewController`:
 ![Imgur](http://i.imgur.com/Ezmw0Ah.png)  
