@@ -154,7 +154,8 @@ func count() -> Int{
 Your `TodoList` class should now look like this:  
 ![Imgur](http://i.imgur.com/TJvuCpb.png)  
 
-
+This completes the building of our model.  
+We will continue adding some additional functionality in the next lab.  
 
 ##UIView  
 > The UIView class defines a rectangular area on the screen and the interfaces for managing the content in that area.  
@@ -199,7 +200,20 @@ When you are done researching, we can remove the `self.view` code from before.
 > There are 2 primary types of view controllers. There are **content** view controllers that present content to the user, and there are **container** view controllers that manage other view controllers and how they are displayed to the user.  
 
 ##UINavigationController  
-> UINavigationController is a container view controller. It manages *child* view controllers. It's "children" 
+> UINavigationController is a container view controller. It manages *child* view controllers. 
+
+> The UINavigationController class implements a specialized view controller that manages the navigation of hierarchical content. This navigation interface makes it possible to present your data efficiently and makes it easier for the user to navigate that content. You generally use this class as-is but you may also subclass to customize the class behavior.  
+
+> For more information on UINavigationController: [UINavigationController Documentation](https://developer.apple.com/reference/uikit/uinavigationcontroller)  
+
+There are 2 ways to incorporate a UINavigationController into your application. We can do it using Storyboards or build it programmatically. For today, we will use Storyboards.  
+
+> In the iOS 401, we spend an entire week building out an application programmatically, including the user interface.  
+
+On the left, click on **main.storyboard**. You should now see something similar to this:  
+![Imgur](http://i.imgur.com/sBaYTy8.png)  
+
+
 
 ##UITableView  
 ##UITableViewCell  
