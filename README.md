@@ -246,11 +246,130 @@ Go to the attributes inspector on the right, and make sure that *Adjust Scroll V
 ![Imgur](http://i.imgur.com/OTZLRAm.png)  
 
 ##UITableViewCell  
+> This class defines the attributes and behavior of the cells that appear in a UITableView. This class includes properties and methods for setting and managing cell content and background (including text, images, and custom views), managing the cell selection and highlight state, managing accessory views, and initiating the editing of the cell contents.  
+
+> When creating cells, you can customize them yourself or use one of several predefined styles. The predefined cell styles are the simplest option. With the predefined styles, the cell provides label and image subviews whose positions and styling are fixed.  
+
+In storyboard, let's get a Table View Cell from the UIElements in the bottom right corner of Xcode.  
+![Imgur](http://i.imgur.com/wstkHnG.png)  
+
+Now drag out the cell and drop it on top of the TableView on our ViewController.  
+![Imgur](http://i.imgur.com/CbJSOKn.png)  
+
+In the *Attributes Inspector* on the right, change the style of the cell from *Custom* to *Basic* and set "cell" as the Identifier.  
+
+So, your attributes should look like this:  
+![Imgur](http://i.imgur.com/MtXCyHk.png)  
+
+Now, we can open what is called the *Assistant Editor*.  
+To do this, `option+click` on the `ViewController.swift` file in our project on the left.  
+
+> The Assistant Editor allows us to do a side-by-side view of 2 different files. In our case, the `ViewController.swift` file and our `Main.storyboard` file.  
+
+Xcode should now look similar to this:  
+![Imgur](http://i.imgur.com/UaXvw0I.png)  
+
+In the View Heirarcy on the left, next to our files, click on the Table View.  
+
+Now, `ctrl+drag` from the Table View to your code, right above the `viewDidLoad` method.  
+
+When doing this, you should see a blue connection from the storyboard to your code.  
+
+After you let go to make the connection, you should see a box appear.  
+![Imgur](http://i.imgur.com/OFQS48y.png)  
+
+This will allow you to enter a name for this UITableView. For today, we will call this `tableView`.  
+
+Type in `tableView` and click `connect`.  
+
+You should now see an outlet to your `tableView` in the code on the right.  
+
+> This is how we can connect many objects from storyboards to code. This allows us to build complex and dynamic UI.  
+
+![Imgur](http://i.imgur.com/Av9RTEG.png)  
+
+Now, in the top right of Xcode, click on the button that looks like multiple lines, next to the 2 blue rings.  
+
+This will take us out of the assistant editor and will return us to a single page view.  
+
+![Imgur](http://i.imgur.com/GwtcGpE.png)  
+
+Click on the `ViewController.swift` file on the left to bring the code back up.  
+
+Now, in order to provide, or be the "source" of our `tableView`'s data, we need to make our `ViewController` class conform to the `UITableViewDataSource` protocol.  
+
+This should look similar to what we did earlier in the day with protocols.  
+
+At the top of the file, under the `import UIKit` line, where the class is declared, Add: `UITableViewDataSource`  
+![Imgur](http://i.imgur.com/ljpEzzr.png)  
+
+> NOTE: The error we get should be because, as stated, we are not properly conforming to the `UITableViewDataSource` protocol. This protocol requires 2 methods to be implemented. These methods are used to provide the tableView with it's data.
+
+Under the `didRecieveMemoryWarning` function, begin to type `tableView`, you should see the following list of methods appear:  
+![Imgur](http://i.imgur.com/0Sav9FY.png)  
+
+The 2 required methods we must implement to be our `tableView`'s dataSource are `tableView(cellForRowAt indexPath:)` and `tableView(numberOfRowsInSection:)`.  
+
+Allowing autocomplete to help us out we should end up with the following:  
+![Imgur](http://i.imgur.com/EodqlH3.png)  
+
+First, we can add 1 line of code to `numberOfRowsInSection` to complete the method.  
+
+Replace the `code` keyword with the following line:  
+```swift
+return TodoList.shared.count()
+```  
+
+Then, inside of the `cellForRowAt` method, add the following line:  
+```swift
+let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+```  
+
+> UITableViewCell's are reused by UITableView's as needed. This is very powerful because it helps to keep our memory footprint minimal while still being very fast.  
+
+> The "cell" identifier we provided **MUST** match the identifier you assigned in the attributes inspector in `Main.Storyboard`.  
+
+> Also note that `cellForRowAt` gets called for **Every** cell as its about to be displayed on screen.  
+
+After the above line of code, add the following:  
+```swift
+let todo = TodoList.shared.getTodoAt(index: indexPath.row)
+cell.textLabel?.text = todo.text
+return cell
+```  
+
+> The above code gets a reference to the todo item for this specific cell and assigns it's `.text` String to be the cell's `textLabel` text. Finally, this method needs to return a `UITableViewCell`, so we return the newly created and configured cell.  
+
+One other very important thing we need to do to get this to work, is assign the `dataSource` of the `tableView` to be this `ViewController` class.  
+
+We can do this by adding the following line inside `viewDidLoad`, below `super.viewDidLoad(animated)`:  
+```swift
+self.tableView.dataSource = self
+```  
+
+Your `ViewController.swift` class should now look similar to this:  
+![Imgur](http://i.imgur.com/0Sav9FY.png)  
+
+Now we are almost done. We just need to give ourselves some starting `Todo` items so we can see them displayed in the `tableView`.  
+
+To do this, add the following code beneath the above line inside `viewDidLoad`:  
+```swift
+for number in 1...5{
+    let todo = Todo(text: "Todo Number \(number)")
+    TodoList.shared.add(todo: todo)
+}
+```  
+
+> This will give us 5 default "Todo" objects to populate our table with.  
+
+Build and run to see the result!  
 
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own.  
 
-1. 
+1. Look into subclassing `UITableViewCell` and create your own custom subclass. 
+
+2. Research `UITAblViewHeaderView` and `UIImageView` and give your Todo list a custom `HeaderView`.  
 
 
 ##Lab-4-prework  
