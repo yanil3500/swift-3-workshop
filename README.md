@@ -369,7 +369,7 @@ Build and run to see the result.
 
 1. Look into subclassing `UITableViewCell` and create your own custom subclass. 
 
-2. Research `UITAblViewHeaderView` and `UIImageView` and give your Todo list a custom `HeaderView`.  
+2. Research `UITablViewHeaderView` and `UIImageView` and give your Todo list a custom `HeaderView`.  
 
 
 ##Lab-4-prework  
