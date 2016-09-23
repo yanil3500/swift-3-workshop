@@ -22,6 +22,8 @@ class NewTodoViewController: UIViewController {
     }
     
 
+    @IBAction func closeButtonPressed(_ sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

@@ -79,9 +79,38 @@ Before we continue, we need another subclass of UIViewController for our new Vie
 As before, navigate to *File > New > File...* but this time, instead of selecting **Swift File**, we want to select **Cocoa Touch Class**.  
 Here we can specify what type we'd like to subclass, and in our case, this should be `UIViewController`.  
 Then, set the Class name to be `NewTodoViewController`.  
-![Imgur](http://i.imgur.com/MEwbrhM.png)  
+![Imgur](http://i.imgur.com/mWYVzUv.png)  
 
+In storyboard, select the new ViewController we dropped in.  
+At the top of the attributes inspector, select the `Identity Inspector`(It looks kinda like the front of a newspaper..):  
+![Imgur](http://i.imgur.com/2zR8ilo.png)  
 
+At the top, we can specify what class/subclass this ViewController is.  
+Type in `NewTodoViewController` and make sure to press **ENTER** when your done.  
+> This is a very annoying bug that has plagued Xcode for years now... If you don't press enter, the box will still show your subclass name, but it will not apply it to this ViewController, causing a crash that can be very tough to find.  
+
+So, lets search again for a *button* in the UIElements, and drag one out onto the top left corner of our `NewTodoViewController`.  
+![Imgur](http://i.imgur.com/5aZISlg.png)  
+
+We will again, use auto layout to constrain this button to the top corner.  
+Select the `Pin` button again, but this time we only need to select the top and left constraints.  
+![Imgur](http://i.imgur.com/Q9tlZdy.png)  
+
+> We only have to set 2 of the constraints because buttons have an intrinsic content size. This means that they can know their size based on the content they contain. In this case, the font size and button text tell the button how long and tall to be. Keep in mind you are still able to assign additional constraints if you'd like.  
+
+> You may also see some yellow lines appear on your `NewTodoViewController`. This is just auto layout's way of telling you that you have constraints that are good, but that the storyboard doesn't currently reflect those constraints. To fix this, click on the tie-fighter-looking button to the right of the `pin` button and select *Update Frames*.  
+![Imgur](http://i.imgur.com/psLAl92.png)  
+
+Click on the button and in the attributes inspector set the *Title* of the button to be `Close`.  
+
+Open the assistant editor again to get a side by side view of the storyboard and the `NewTodoViewController.swift`.  
+![Imgur](http://i.imgur.com/pBEOb1c.png)  
+
+Like we did before, `ctrl+drag` from the button to the code but this time, drag to the code underneath `didRecieveMemoryWarning` function.  
+
+In the popup box, change the *connection* from **Outlet** to **Action**.
+In the *Name* field, type `closeButtonPressed` and leave everything else the same:  
+![Imgur](http://i.imgur.com/fcrARly.png)  
 
 ##UILabel  
 ##UITextField  
