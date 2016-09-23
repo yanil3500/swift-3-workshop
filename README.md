@@ -2,7 +2,7 @@
 ####1. Open the `CFS3ToDoList.xcodeproj` using Xcode 8, provided in this repository.  
 ####2. Ensure in Xcode that you are on the **lab-1** branch.  
 ![Imgur](http://i.imgur.com/3hl3ne1.png)  
-####3. Click on `Swift3Workshop.playground` on the left  
+####3. In the `CFS3ToDoList` folder on the left, click on `Swift3Workshop.playground`.  
 
 ##Lab-1  
 ##Constants and Variables  
