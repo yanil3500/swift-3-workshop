@@ -25,10 +25,17 @@
                                     <action selector="closeButtonPressed:" destination="BYt-CW-zVl" eventType="touchUpInside" id="h2t-GZ-HHZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqM-7M-MHQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nAc-Ow-AnS" firstAttribute="top" secondItem="gY8-0R-8OX" secondAttribute="bottom" constant="10" id="4oj-SR-0fP"/>
+                            <constraint firstItem="GqM-7M-MHQ" firstAttribute="centerX" secondItem="okr-zR-dD1" secondAttribute="centerX" id="EpH-oS-XCy"/>
+                            <constraint firstItem="GqM-7M-MHQ" firstAttribute="top" secondItem="gY8-0R-8OX" secondAttribute="bottom" constant="75" id="KgC-P2-XGR"/>
                             <constraint firstItem="nAc-Ow-AnS" firstAttribute="leading" secondItem="okr-zR-dD1" secondAttribute="leadingMargin" constant="10" id="MfB-nA-hAQ"/>
                         </constraints>
                     </view>

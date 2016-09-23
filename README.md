@@ -99,6 +99,7 @@ Select the `Pin` button again, but this time we only need to select the top and 
 > We only have to set 2 of the constraints because buttons have an intrinsic content size. This means that they can know their size based on the content they contain. In this case, the font size and button text tell the button how long and tall to be. Keep in mind you are still able to assign additional constraints if you'd like.  
 
 > You may also see some yellow lines appear on your `NewTodoViewController`. This is just auto layout's way of telling you that you have constraints that are good, but that the storyboard doesn't currently reflect those constraints. To fix this, click on the tie-fighter-looking button to the right of the `pin` button and select *Update Frames*.  
+
 ![Imgur](http://i.imgur.com/psLAl92.png)  
 
 Click on the button and in the attributes inspector set the *Title* of the button to be `Close`.  
@@ -112,8 +113,42 @@ In the popup box, change the *connection* from **Outlet** to **Action**.
 In the *Name* field, type `closeButtonPressed` and leave everything else the same:  
 ![Imgur](http://i.imgur.com/fcrARly.png)  
 
+If you close out the *Assistant Editor* and click on `NewTodoViewController` on the left, we should see our new **Action** where we connected it.  
+
+> I have gone ahead and removed the commented out code, feel free to explore this if you'd like, but we won't need it for this demo.  
+
+This is what your `NewTodoViewController.swift` should look like.  
+![Imgur](http://i.imgur.com/qlpOjiC.png)  
+
+We just need to add a single line inside the `closeButtonPressed` function:  
+```swift
+dismiss(animated: true, completion: nil)
+```  
+
+This will give us a way to dismiss this view controller.  
+
 ##UILabel  
+> The UILabel class implements a read-only text view. You can use this class to draw one or multiple lines of static text, such as those you might use to identify other parts of your user interface. The base UILabel class provides support for both simple and complex styling of the label text. You can also control over aspects of appearance, such as whether the label uses a shadow or draws with a highlight. If needed, you can customize the appearance of your text further by subclassing.  
+
+> Labels are much like buttons when it comes to Auto Layout. They have an intrinsic size.  
+
+Back in storyboard, find our `NewTodoViewController`.  
+Search for **label** in the list of UIElements and drag out onto the `NewTodoViewController`.  
+Again, in the attributes inspector, we can change the label's *Text*. Change it to be `New Todo:`  
+
+Then, let's assign the label some constraints.  
+Click on the `pin` button and set the top constraint, but change the value to `75`.  
+![Imgur](http://i.imgur.com/ACAmdgE.png)  
+
+Instead of setting the left and right, this time we will center the label in it's superview.  
+Click the `align` button to the left of the `pin` button and select `Horizontally in Container`. Leave the value at `0`.  
+![Imgur](http://i.imgur.com/QLs3Mzb.png)  
+
+Again, if you see yellow warning lines, go through the same process as above to `Update Frames`.  
+
 ##UITextField  
+> 
+
 ##Local Persistance  
 ##Animations  
 
