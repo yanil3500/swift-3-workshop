@@ -130,7 +130,7 @@ This will give us a way to dismiss this view controller.
 ##UILabel  
 > The UILabel class implements a read-only text view. You can use this class to draw one or multiple lines of static text, such as those you might use to identify other parts of your user interface. The base UILabel class provides support for both simple and complex styling of the label text. You can also control over aspects of appearance, such as whether the label uses a shadow or draws with a highlight. If needed, you can customize the appearance of your text further by subclassing.  
 
-> Labels are much like buttons when it comes to Auto Layout. They have an intrinsic size.  
+> Labels are much like buttons when it comes to Auto Layout. They have an intrinsic size so we are required to implement less constraints.  
 
 Back in storyboard, find our `NewTodoViewController`.  
 Search for **label** in the list of UIElements and drag out onto the `NewTodoViewController`.  
@@ -147,10 +147,22 @@ Click the `align` button to the left of the `pin` button and select `Horizontall
 Again, if you see yellow warning lines, go through the same process as above to `Update Frames`.  
 
 ##UITextField  
-> 
+> A UITextField object displays an editable text area in your interface. You use text fields to gather text-based input from the user using the onscreen keyboard. The keyboard is configurable for many different types of input such as plain text, emails, numbers, and so on. Text fields use the target-action mechanism and a delegate object to report changes made during the course of editing.
+
+> Using delegation, we can respond to changes that occur in the UITextfield.  
+
+Search for **text field** in the list of UIElements and drag out a Text Field and drop directly underneath the label we placed a moment ago.  
+![Imgur](http://i.imgur.com/ToezhqF.png)  
+
+Drag the left and right edges out till they "click" and you see the blue guides on the right and left. These are the margins we will use to constrain our text field too.  
+![Imgur](http://i.imgur.com/t6520WM.png)  
+
+Then we will set the following constraints using the `pin` tool.  
+![Imgur](http://i.imgur.com/8WfBkJp.png)  
+
+
 
 ##Local Persistance  
-##Animations  
 
 ####Coding Challenges  
 > If you have extra time, here are some good challenges to attempt on your own.  
