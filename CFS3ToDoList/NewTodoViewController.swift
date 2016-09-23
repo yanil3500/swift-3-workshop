@@ -8,12 +8,14 @@
 
 import UIKit
 
-class NewTodoViewController: UIViewController {
+class NewTodoViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +28,18 @@ class NewTodoViewController: UIViewController {
     
         dismiss(animated: true, completion: nil)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let userText = textField.text{
+            let todo = Todo(text: userText)
+            TodoList.shared.add(todo: todo)
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+        return true
     }
     
 

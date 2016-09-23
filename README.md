@@ -1,8 +1,6 @@
 ##Lab-4-prework  
 ####1. Ensure in Xcode that you are on the **lab-4** branch.  
 
-##Lab-2  
-
 ##Auto Layout
 > Auto Layout is a constraint-based layout system. Auto Layout is the only way to go for properly laying out your interface for multiple screen sizes. Auto Layout is extremely flexible and feature rich. Constraints are the fundamental building block of Auto Layout. Constraints express rules for the layout of elements in your interface.
 
@@ -157,14 +155,76 @@ Search for **text field** in the list of UIElements and drag out a Text Field an
 Drag the left and right edges out till they "click" and you see the blue guides on the right and left. These are the margins we will use to constrain our text field too.  
 ![Imgur](http://i.imgur.com/t6520WM.png)  
 
-Then we will set the following constraints using the `pin` tool.  
+Then we will set the following 3 constraints using the `pin` tool.  
 ![Imgur](http://i.imgur.com/8WfBkJp.png)  
 
+In the attributes inspector, feel free to give your UITextField *placeholder text*.  
+![Imgur](http://i.imgur.com/4NxpqWX.png)  
 
+Now open the assistant editor by `option+click`ing the `NewTodoViewController.swift` file on the left.  
 
-##Local Persistance  
+We will need an outlet to our UITextField, so `ctrl+drag` from the text field to the top of our class, like we did with the `tableView`.  
+I am going to call mine, `textField` to keep it simple.  
+You should see a new `@IBOutlet` to `textfield`.  
+![Imgur](http://i.imgur.com/4NxpqWX.png)  
+
+Close out the assistant editor and select `NewTodoViewController.swift` on the left.  
+Add `UITextFieldDelegate` to the top of your class declaration, again like we did with the `UITableViewDataSource` protocol.  
+
+Then, in `viewDidLoad`, we will assign this class to be the `textField`'s delegate.  
+At this point, your `NewTodoViewController` class should look like this:  
+![Imgur](http://i.imgur.com/bGJ998V.png)  
+
+Now, below our `closeButtonPressed` function, we will add the following function:  
+```swift
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    if let userText = textField.text{
+        let todo = Todo(text: userText)
+        TodoList.shared.add(todo: todo)
+    }
+    
+    dismiss(animated: true, completion: nil)
+    
+    return true
+}
+```  
+
+The function above is one of the delegate methods we get from the `UITextFieldDelegate` protocol.  
+This function fires when the user hits the `return` key on the keyboard.  
+
+> The above code checks to see if we have text from the user input into the textfield. If we do, then it stores that value in `userText`. We then use the initializer we made for our Todo class to create a new `Todo` instance. Then, we use the `TodoList` class to add it to our existing todos.  
+
+We can build and run this now to try it out, but there a problem, can you spot it?  
+
+We are successfully adding the `Todo` to our `TodoList` class, but our `ViewController`'s `tableView` needs to reload its data. This will cause it to check again to see how many `Todo`'s `TodoList` has.  
+
+To do this, select `ViewController.swift`, and add the following function:  
+```swift
+override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
+    }
+```  
+
+> The function above fires every time the this view controller will be displayed on screen. This is perfect for what we want, because each time this view controller gets displayed, we want it to check to make sure it is up to date with our `TodoList`.  
+
+Finally, lets remove the for loop from `viewDidLoad` that was pre-populating our `Todo` items.  
+
+Your `ViewController.swift` class should look something like this:  
+![Imgur](http://i.imgur.com/7531FcN.png)  
+
+Run your application. Our `tableView` should appear empty at first, but add a new Todo item. It should populate into our list of `Todo`'s.  
+
+##Wrap up  
+We have covered quite a bit of material today. I would still suggest going through and working the Coding Challenges on your own.  
+
+> Dont forget to commit your work! You worked hard to get here!  
 
 ####Coding Challenges  
-> If you have extra time, here are some good challenges to attempt on your own.  
+> Here are some good challenges to attempt on your own.  
 
-1. 
+1. There is an issue with the code above. When we create our `TodoList` and close the app, then relaunch, our `TodoList` is empty. This is where Persistence would come into play. To implement persistence into your TodoList Application, I would recommend following this tutorial here: [Persistence Tutorial](https://www.hackingwithswift.com/read/12/1/setting-up)  
+
+2. Another issue with our TodoList is that users cannot remove Todo items once they are completed. Look into `UITableViewDelegate`. There is a method called `tableView(_:commitEditingStyle:forRowAt:)` that will allow us to implement a "Swipe to Delete". This method will use our `TodoList.share.remove()` function to remove the `Todo` for the specific index.  

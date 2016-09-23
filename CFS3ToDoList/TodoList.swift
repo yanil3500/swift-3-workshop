@@ -15,7 +15,7 @@ class TodoList{
     var allTodos = [Todo]()
     
     private init(){}
-    
+
     func add(todo: Todo){
         self.allTodos.append(todo)
     }
@@ -37,6 +37,12 @@ class TodoList{
     func count() -> Int{
         return self.allTodos.count
     }
+    
+    func save(file: String)
+    {
+        NSKeyedArchiver.archiveRootObject(self.allTodos, toFile: file)
+    }
+    
     
 }
 
