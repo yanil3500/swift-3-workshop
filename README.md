@@ -108,7 +108,7 @@ Like we did before, `ctrl+drag` from the button to the code but this time, drag 
 
 In the popup box, change the *connection* from **Outlet** to **Action**.
 In the *Name* field, type `closeButtonPressed` and leave everything else the same:  
-![Imgur](http://i.imgur.com/fcrARly.png)  
+![Imgur](http://i.imgur.com/qlpOjiC.png)  
 
 If you close out the *Assistant Editor* and click on `NewTodoViewController` on the left, we should see our new **Action** where we connected it.  
 
