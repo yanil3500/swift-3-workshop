@@ -9,4 +9,6 @@
 `brew install git`
 5. Change from `master` to `lab-1` branch to get started.  
 
+##Slidedeck
+[Swift-3-workshop](https://www.icloud.com/keynote/0HfZtjZ-IAGhLX8mKhxh9kXKQ#Swift-3-workshop) 
 
