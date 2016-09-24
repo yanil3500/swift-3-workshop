@@ -103,7 +103,6 @@ Select the `Pin` button again, but this time we only need to select the top and 
 Click on the button and in the attributes inspector set the *Title* of the button to be `Close`.  
 
 Open the assistant editor again to get a side by side view of the storyboard and the `NewTodoViewController.swift`.  
-![Imgur](http://i.imgur.com/pBEOb1c.png)  
 
 Like we did before, `ctrl+drag` from the button to the code but this time, drag to the code underneath `didRecieveMemoryWarning` function.  
 
