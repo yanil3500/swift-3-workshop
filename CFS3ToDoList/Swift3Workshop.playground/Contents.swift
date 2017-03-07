@@ -189,26 +189,190 @@ if let surveyAnswer = surveyAnswer{
 
 //Classes and Structs
 
+//Structs, when assigned, create a copy and is assigned to a given variable. 
+/*
+ //Create a new struct
+ let location = ScreenLocation(x: 0, y: 0);
+ 
+ //Copies struct from location constant into location2 variable
+ var location2 = location;
+ */
+struct ScreenLocation{
+    var x: Int;
+    var y: Int;
+}
 
+let location = ScreenLocation(x: 0, y: 0);
+
+var location2 = location;
+
+print("(Before assignments) Location2: \(location2), Location: \(location)");
+
+location2.x = 10;
+
+print("(After assignments) Location2: \(location2.x), Location: \(location.x)");
+
+
+class Person{
+    var name: String;
+    var age: Int;
+    
+    //The init function is equivalent to a constructor function
+    
+
+    //The assignment of 0 to age property means a default value has been added
+    
+    init(name: String, age: Int = 0) {
+        self.name = name;
+        self.age = age;
+    }
+}
+
+let myPerson = Person(name: "Adam", age: 30);
+
+let myFriend = Person(name: "Joe");
+
+
+var otherPerson = myPerson;
+
+otherPerson.age = 100;
+
+/*The age property on the myPerson object has now been changed to 100. The reason being is that when the assignment otherPerson = myPerson happened, it created a new reference to the myPerson object instead of creating a copy of the myPerson object. This means that both identifiers, myPerson and otherPerson, are pointing to the same object in memory; Meaning if you access and/or change a property on a object referenced by one identifier, the other identifier would have access to those changes.*/
+
+
+print(myPerson.age);
 
 //Protocols
 
+protocol DogYears {
+    var age : Int {set get}
+
+}
+
+extension DogYears {
+    func ageInDogYears() -> Int {
+        return age * 7;
+    }
+}
+
+class Dog: DogYears {
+    var age = 1;
+    
+    func ageInDogYears() -> Int {
+        return age * 7;
+    }
+}
 
 
 //Inheritance
 
+/*
+ Note that inside the ageInDogYears function, we can access a property called age. This is because of the inheritance of Student from Person. Person has a property called age and because Student inherits from Person, Student also has an age property.
+ */
+
+class Student: Person, DogYears {
+    var studentID: String?;
+    var classNumber: Int?;
+}
+
+let student1 = Student(name: "Mike", age: 24);
+
+student1.classNumber = 401;
+student1.studentID = "s786sf67822g29";
+
+print("Age in dog years: \(student1.ageInDogYears())");
 
 
 //Extensions
 
+extension String{
+    
+    func length() -> Int {
+        return self.characters.count;
+    }
+}
 
+let myString = "Will the real Slim Shady please stand up?";
 
+print("The length of myString is \(myString.length())")
 //Functions
 
+func greet(person:String = "Errbody") -> String {
+    return "Hello, \(person)!";
+}
 
+print(greet(person: "Adam"))
+print(greet());
+
+func addThese(numbers: Int...) -> Int {
+    var total = 0;
+    
+    for number in numbers {
+        total += number;
+    }
+    
+    return total;
+}
+
+print(addThese(numbers: 0, 1, 2, 3, 4, 5));
+
+func changeStuff(number: Int, callback: (Int) -> ()){
+    callback(number * number);
+}
 
 //Closures
 
+changeStuff(number: 10) { (result) in
+    print("Inside of changeStuff closure: \(result)");
+}
+
+//Coding challenges
+
+
+//Create a function that takes in an array of Int's, loops through them, and returns a sum of all the numbers as an Int.
+
+var numbersArr = [89,78,43,2,4,5,6,7,8];
+
+numbersArr.sort{
+    return $0 < $1;
+}
+
+let sum = numbersArr.reduce(0, { x, y in
+    x + y;
+})
+
+print("The sum of all the number in numbersArr is \(sum)");
+
+//Create a function that takes in a String and checks if it is a palindrome and returns a Bool(True or False).
+
+func isPalindrome(str: String) -> Bool {
+    print("Inside of the isPalindrome function: \(str.length())");
+    print("Inside of the isPalindrome function (after string manipulation): \(str.lowercased().replacingOccurrences(of: "[\\s\\.,!?+]", with: "", options: .regularExpression, range: nil))");
+    return String(str.lowercased().replacingOccurrences(of: "[\\s\\.,!?+]", with: "", options: .regularExpression, range: nil)) == String(str.lowercased().characters.reversed()).replacingOccurrences(of: "[\\s\\.,!?+]", with: "", options: .regularExpression, range: nil);
+}
+
+print(isPalindrome(str: "A Santa dog lived as a devil God at NASA."));
+
+//Create a new class of your choice that conforms to the DogYears protocol, but changes the default implementation.
+class Cat: DogYears {
+    var name : String;
+    
+    var age = 1;
+    
+    init(name: String, age: Int){
+        self.name = name;
+        self.age = age;
+    }
+    
+    func ageInDogYears() -> Int {
+        return Int(12.5 * (Double(age) * 7.0));
+    }
+    
+}
+
+let mittens = Cat(name: "Mittens", age:2);
+
+print("\(mittens.name) the cat is \(mittens.ageInDogYears()) years old in dog years.");
 
 
 
