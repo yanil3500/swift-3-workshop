@@ -1,11 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eru-Im-UAx">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eru-Im-UAx">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--New Todo View Controller-->
+        <scene sceneID="9fx-eh-z6d">
+            <objects>
+                <viewController id="RsR-SM-rMG" customClass="NewTodoViewController" customModule="CFS3ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MBN-rc-hhV"/>
+                        <viewControllerLayoutGuide type="bottom" id="zOD-vU-sLI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gTg-U9-w7R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igi-9V-OLh" userLabel="Close">
+                                <rect key="frame" x="16" y="20" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonPresses:" destination="RsR-SM-rMG" eventType="touchUpInside" id="01s-P4-O7y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rja-KV-X5Z">
+                                <rect key="frame" x="139" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the details of your new todo." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-xT-g62">
+                                <rect key="frame" x="16" y="149" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rja-KV-X5Z" firstAttribute="top" secondItem="MBN-rc-hhV" secondAttribute="bottom" constant="100" id="9q9-Qf-ITD"/>
+                            <constraint firstItem="Rja-KV-X5Z" firstAttribute="centerX" secondItem="gTg-U9-w7R" secondAttribute="centerX" id="An2-in-YE4"/>
+                            <constraint firstItem="1Hp-xT-g62" firstAttribute="trailing" secondItem="gTg-U9-w7R" secondAttribute="trailingMargin" id="Vph-us-3Fp"/>
+                            <constraint firstItem="1Hp-xT-g62" firstAttribute="top" secondItem="Rja-KV-X5Z" secondAttribute="bottom" constant="7.5" id="rQt-X7-1cC"/>
+                            <constraint firstItem="1Hp-xT-g62" firstAttribute="leading" secondItem="gTg-U9-w7R" secondAttribute="leadingMargin" id="u5i-xr-nQe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="1Hp-xT-g62" id="otF-zZ-nRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUR-nc-Okd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.625" y="-710"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -15,23 +72,22 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bu3-6T-m9j">
-                                <frame key="frameInset" minY="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bu3-6T-m9j">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="gQp-3B-TLC" style="IBUITableViewCellStyleDefault" id="0bg-IV-3HM">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="gQp-3B-TLC" rowHeight="58" style="IBUITableViewCellStyleDefault" id="0bg-IV-3HM">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bg-IV-3HM" id="41Z-2m-dgs">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQp-3B-TLC">
-                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="57"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -44,15 +100,27 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bu3-6T-m9j" secondAttribute="trailing" id="6VJ-y8-Q7z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bu3-6T-m9j" secondAttribute="bottom" id="7G7-rJ-wJK"/>
+                            <constraint firstItem="bu3-6T-m9j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dmc-PP-5hQ"/>
+                            <constraint firstItem="bu3-6T-m9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U9m-p4-Q3c"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bTU-xs-xWc"/>
+                    <navigationItem key="navigationItem" id="bTU-xs-xWc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pWH-9m-NWi">
+                            <connections>
+                                <segue destination="RsR-SM-rMG" kind="presentation" id="faC-DG-Ylc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bu3-6T-m9j" id="2RR-pl-vZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1074.375" y="136.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tx3-GU-Hya">
