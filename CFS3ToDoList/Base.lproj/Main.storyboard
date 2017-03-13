@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="1055.625" y="-710"/>
         </scene>
-        <!--View Controller-->
+        <!--Todos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CFS3ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,11 +83,11 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bg-IV-3HM" id="41Z-2m-dgs">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQp-3B-TLC">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="57"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="bu3-6T-m9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U9m-p4-Q3c"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bTU-xs-xWc">
+                    <navigationItem key="navigationItem" title="Todos" id="bTU-xs-xWc">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pWH-9m-NWi">
                             <connections>
                                 <segue destination="RsR-SM-rMG" kind="presentation" id="faC-DG-Ylc"/>

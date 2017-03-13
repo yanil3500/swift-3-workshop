@@ -27,6 +27,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func closeButtonPresses(_ sender: Any) {
+        print("Inside of newTodoViewController: close button works!")
         dismiss(animated: true, completion: nil)
     }
     
